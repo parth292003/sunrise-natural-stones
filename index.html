@@ -3368,36 +3368,34 @@ advForm.addEventListener('submit', (e) => {
   advSubmit.setAttribute('disabled','');
   advLoader.classList.add('is-shown');
   advResult.classList.remove('is-shown');
+  
   const data = new FormData(advForm);
-  const styles = [...chosenStyles].join(', ') || 'no preference';
-  const prompt = `${CATALOGUE}
+  const use = data.get('use');
+  const setting = data.get('setting');
+  const styles = [...chosenStyles];
+  const notes = data.get('notes') || '';
 
-You are an expert stone consultant at Sunrise Natural Stones, Udaipur. A customer is enquiring:
-
-Use case: ${data.get('use')}
-Setting: ${data.get('setting')}
-Style direction: ${styles}
-Additional notes: ${data.get('notes') || '—'}
-
-Recommend 2 or 3 stones FROM THE CATALOGUE above that would suit this project. For each recommendation, write 1-2 sentences explaining WHY (durability, look, climate suitability, finish). Include a brief recommended finish (polished/honed/shot blast).
-
-Format as HTML with this exact structure (no markdown, no code fences):
-<strong>Our recommendations:</strong>
-<p><em>1. [Stone Name]</em> — [reason in 1-2 sentences]. Suggested finish: [finish].</p>
-<p><em>2. [Stone Name]</em> — [reason in 1-2 sentences]. Suggested finish: [finish].</p>
-<p style="margin-top:14px; font-size:13px; color:var(--mute);">Want samples or a quote? Click "Start an enquiry" below.</p>`;
-
-  try {
-    const reply = await window.claude.complete(prompt);
-    advResult.innerHTML = reply;
-    advResult.classList.add('is-shown');
-  } catch(err){
-    advResult.innerHTML = '<strong>Sorry — the advisor could not respond right now.</strong> Please try again, or <a href="#contact">start a manual enquiry</a> and we will recommend a stone personally.';
-    advResult.classList.add('is-shown');
-  } finally {
-    advLoader.classList.remove('is-shown');
-    advSubmit.removeAttribute('disabled');
-  }
+  // Simulate a highly responsive 1.2s "thinking" delay for professional UX feel
+  setTimeout(() => {
+    try {
+      const recommendations = getRecommendations(use, setting, styles, notes);
+      let html = '<strong>Our recommendations:</strong>';
+      recommendations.forEach((rec, idx) => {
+        html += `<p><em>${idx + 1}. ${rec.name}</em> — ${rec.why} Suggested finish: <strong>${rec.suggestedFinish}</strong>.</p>`;
+      });
+      html += `<p style="margin-top:14px; font-size:13px; color:var(--mute);">Want samples or a quote? Click "Start an enquiry" below.</p>`;
+      
+      advResult.innerHTML = html;
+      advResult.classList.add('is-shown');
+    } catch(err) {
+      console.error(err);
+      advResult.innerHTML = '<strong>Sorry — the advisor could not respond right now.</strong> Please try again, or <a href="#contact">start a manual enquiry</a> and we will recommend a stone personally.';
+      advResult.classList.add('is-shown');
+    } finally {
+      advLoader.classList.remove('is-shown');
+      advSubmit.removeAttribute('disabled');
+    }
+  }, 1200);
 });
 
 // ───── Reveal on scroll

@@ -1,0 +1,3182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+<title>Sunrise Natural Stones — Marble, Granite & Quartz Exporters from Udaipur, India</title>
+<meta name="description" content="Sunrise Natural Stones — exporters of marble, granite, quartz and sandstone from Udaipur, Rajasthan. Slabs, blocks, cut-to-size and finished pieces, shipped worldwide." />
+<link rel="icon" type="image/png" href="logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   SUNRISE NATURAL STONES — refined system
+   Display: Cormorant Garamond · UI: Inter · Mono: JetBrains Mono
+   ───────────────────────────────────────────────────────────── */
+:root{
+  --paper:#ffffff;
+  --cream:#FAF8F3;
+  --warm:#F4EFE3;
+  --ink:#111111;
+  --soft:#3A3835;
+  --mute:#8C8780;
+  --line:#EAE4D7;
+  --line-soft:#F2EDE0;
+  --saffron:#F2A310;
+  --saffron-deep:#D88A00;
+  --saffron-soft:#FFE7B5;
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans:  "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+  --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+
+  --max: 1360px;
+  --pad: clamp(18px, 4vw, 56px);
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust: 100%; }
+html, body{ background:var(--paper); color:var(--ink); }
+body{
+  font-family:var(--sans);
+  font-weight:400;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  font-size:15px;
+  overflow-x:hidden;
+}
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+img{ display:block; max-width:100%; }
+input, textarea, select{ font:inherit; color:inherit; }
+
+.mono{
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--mute);
+  font-weight:400;
+}
+.serif-italic{ font-family:var(--serif); font-style:italic; font-weight:400; }
+
+/* ───────── Sun graphic (re-used) ───────── */
+.sun-glyph{
+  display:inline-block; width:14px; height:14px; vertical-align:middle;
+  background: radial-gradient(circle at 35% 35%, #FFD06A, var(--saffron) 75%);
+  border-radius:50%;
+  position:relative;
+  flex-shrink:0;
+}
+.sun-glyph::before{
+  content:""; position:absolute; inset:-6px;
+  border-radius:50%;
+  border:1px solid rgba(242,163,16,.35);
+}
+
+/* ───────── NAV ───────── */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  padding:14px var(--pad);
+  background:rgba(255,255,255,.85);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom:1px solid transparent;
+  transition: border-color .5s var(--ease), background .5s var(--ease), padding .5s var(--ease);
+}
+.nav.is-scrolled{
+  border-bottom-color:var(--line);
+  background:rgba(255,255,255,.93);
+}
+.nav__inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items:center;
+  gap: 16px;
+}
+.nav__brand{
+  display:inline-flex; align-items:center; gap:10px;
+}
+.nav__logo{
+  width:50px; height:50px; border-radius:6px;
+  background: var(--saffron);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.06);
+}
+.nav__logo img{
+  width:100%; height:100%; object-fit: contain;
+}
+.nav__brand-text{
+  display:flex; flex-direction:column; line-height:1;
+}
+.nav__brand-name{
+  font-family:var(--serif); font-size:17px;
+  letter-spacing:.02em; font-weight:500; color:var(--ink);
+}
+.nav__brand-sub{
+  font-family:var(--mono); font-size:9px;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--mute);
+  margin-top:2px;
+}
+.nav__links{
+  justify-self:center;
+  display:flex; align-items:center; gap:28px;
+}
+.nav__links a{
+  font-size:12.5px; color:var(--soft); letter-spacing:.01em;
+  position:relative; padding:6px 0;
+  transition: color .3s var(--ease);
+}
+.nav__links a::after{
+  content:""; position:absolute; left:0; right:0; bottom:2px;
+  height:1px; background:var(--ink);
+  transform:scaleX(0); transform-origin:left;
+  transition: transform .45s var(--ease-out);
+}
+.nav__links a:hover{ color:var(--ink); }
+.nav__links a:hover::after{ transform:scaleX(1); }
+
+.nav__cta{
+  font-size:12px;
+  padding:10px 14px 10px 16px;
+  border:1px solid var(--ink);
+  border-radius:999px;
+  display:inline-flex; align-items:center; gap:8px;
+  transition: background .35s var(--ease), color .35s var(--ease), gap .35s var(--ease);
+  white-space: nowrap;
+}
+.nav__cta:hover{ background:var(--ink); color:var(--paper); gap:12px; }
+.nav__cta .arr{ display:inline-block; transition: transform .35s var(--ease); }
+.nav__cta:hover .arr{ transform: translateX(2px); }
+
+.nav__burger{
+  display:none; width:38px; height:38px; border-radius:50%;
+  align-items:center; justify-content:center;
+  border:1px solid var(--line);
+  background:var(--paper);
+}
+.nav__burger span{ display:block; width:16px; height:1.4px; background:var(--ink); position:relative; }
+.nav__burger span::before, .nav__burger span::after{
+  content:""; position:absolute; left:0; width:16px; height:1.4px; background:var(--ink);
+}
+.nav__burger span::before{ top:-5px; }
+.nav__burger span::after{ top:5px; }
+
+@media (max-width:860px){
+  .nav__links{ display:none; }
+  .nav__cta{ display:none; }
+  .nav__burger{ display:inline-flex; }
+  .nav__inner{ grid-template-columns: 1fr auto; }
+  .nav__brand-sub{ display:none; }
+}
+
+/* ───────── Mobile menu drawer ───────── */
+.menu{
+  position:fixed; inset:0; z-index:60;
+  background: var(--paper);
+  display:flex; flex-direction:column;
+  padding: 80px var(--pad) 40px;
+  opacity:0; visibility:hidden;
+  transition: opacity .35s var(--ease), visibility .35s;
+}
+.menu.is-open{ opacity:1; visibility:visible; }
+.menu__close{
+  position:absolute; top:16px; right: var(--pad);
+  width:38px; height:38px; border-radius:50%;
+  border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  background: var(--paper);
+}
+.menu__links{
+  display:flex; flex-direction:column; gap: 4px;
+  margin-top: 20px;
+}
+.menu__links a{
+  font-family:var(--serif);
+  font-size: 38px; letter-spacing: -.01em;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.menu__links a .mono{ font-size: 10px; }
+.menu__cta{
+  margin-top: 28px;
+  padding: 14px 18px;
+  border:1px solid var(--ink); border-radius:999px;
+  text-align:center; font-size: 13px; letter-spacing:.04em;
+  align-self:flex-start;
+}
+
+/* ───────── HERO ───────── */
+.hero{
+  min-height: 100svh;
+  padding: 96px var(--pad) 30px;
+  display:flex; flex-direction:column;
+  position:relative;
+  background: var(--paper);
+}
+.hero__meta{
+  display:flex; justify-content:space-between; align-items:center;
+  border-bottom:1px solid var(--line);
+  padding-bottom:14px;
+  opacity:0;
+  animation: fadeIn .9s var(--ease-out) .15s forwards;
+  gap: 12px;
+}
+.hero__meta-loc{ display:flex; align-items:center; gap:10px; }
+
+.hero__grid{
+  flex:1;
+  display:grid;
+  grid-template-columns: 1.0fr 1fr;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: stretch;
+  padding: clamp(28px, 5vw, 60px) 0 clamp(24px, 4vw, 40px);
+}
+.hero__left{
+  display:flex; flex-direction:column; justify-content:space-between;
+  gap: 36px;
+  min-height: 56vh;
+}
+.hero__eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  opacity:0; animation: fadeIn .8s var(--ease-out) .35s forwards;
+}
+.hero__title{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size: clamp(34px, 5.2vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color:var(--ink);
+  margin-top: 16px;
+  overflow: hidden;
+  max-width: 20ch;
+}
+.hero__title .line{
+  display:block;
+  padding-bottom: 2px;
+  transform: translateY(110%);
+  opacity:0;
+  animation: rise 1.1s var(--ease-out) forwards;
+}
+.hero__title .line:nth-child(1){ animation-delay: .25s; }
+.hero__title .line:nth-child(2){ animation-delay: .38s; }
+.hero__title .line:nth-child(3){ animation-delay: .51s; }
+.hero__title em{ color: var(--saffron); font-style: italic; }
+
+@keyframes rise{
+  0%{ transform: translateY(110%); opacity:0; }
+  60%{ opacity:1; }
+  100%{ transform: translateY(0); opacity:1; }
+}
+@keyframes fadeIn{ to{ opacity:1; } }
+
+.hero__bottom{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:28px;
+  opacity:0;
+  animation: fadeIn 1s var(--ease-out) 1s forwards;
+}
+.hero__tagline{
+  font-size: 14.5px;
+  line-height:1.65;
+  color:var(--soft);
+  max-width: 38ch;
+}
+.hero__tagline strong{ color: var(--ink); font-weight: 500; }
+.hero__pills{
+  display:flex; gap: 8px; flex-wrap:wrap;
+  margin-top: 14px;
+}
+.pill{
+  font-family:var(--mono); font-size: 10px; letter-spacing: .12em;
+  padding: 7px 10px; border:1px solid var(--line); border-radius: 999px;
+  color: var(--soft); text-transform:uppercase;
+}
+
+.hero__right{
+  position:relative;
+  border-radius: 2px;
+  overflow:hidden;
+  min-height: 60svh;
+  background: var(--cream);
+}
+.hero__img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  opacity:0;
+  transform: scale(1.06);
+  animation: heroImg 1.6s var(--ease-out) .3s forwards;
+}
+@keyframes heroImg{ to{ opacity:1; transform: scale(1); } }
+.hero__img-fallback{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(circle at 28% 30%, rgba(255,255,255,.5), transparent 55%),
+    radial-gradient(circle at 75% 75%, rgba(120,90,60,.3), transparent 55%),
+    linear-gradient(135deg, #D9CCAE, #A98D5E);
+}
+.hero__caption{
+  position:absolute; left:18px; bottom:18px; right:18px;
+  display:flex; justify-content: space-between; align-items: flex-end;
+  color:#fff;
+  text-shadow: 0 2px 14px rgba(0,0,0,.5);
+  z-index:2;
+}
+.hero__caption .mono{ color: rgba(255,255,255,.85); }
+.hero__caption .name{
+  font-family:var(--serif); font-size: 17px; font-style: italic;
+}
+.hero__caption-r{
+  text-align:right;
+  display:flex; flex-direction:column; gap:2px;
+}
+
+.hero__footer{
+  display:grid;
+  grid-template-columns: repeat(3, auto) 1fr;
+  gap: clamp(18px, 3vw, 40px);
+  border-top:1px solid var(--line);
+  padding-top:18px;
+  opacity:0;
+  animation: fadeIn .9s var(--ease-out) 1.2s forwards;
+  align-items:center;
+}
+.hero__stat{ display:flex; flex-direction:column; gap:6px; }
+.hero__stat .num{
+  font-family:var(--serif);
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight:400;
+  line-height:1;
+  color:var(--ink);
+}
+.hero__stat .lab{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--mute);
+}
+.hero__scroll{
+  justify-self:end;
+  display:flex; align-items:center; gap:12px;
+}
+.hero__scroll-line{
+  display:inline-block; width:56px; height:1px; background:var(--ink);
+  position:relative; overflow:hidden;
+}
+.hero__scroll-line::after{
+  content:""; position:absolute; left:-30%; top:0; width:30%; height:100%;
+  background:var(--saffron);
+  animation: scrollHint 2.4s var(--ease-out) infinite;
+}
+@keyframes scrollHint{ 0%{ left:-30%; } 60%,100%{ left:100%; } }
+
+@media (max-width: 880px){
+  .hero{ padding-top: 88px; }
+  .hero__grid{ grid-template-columns: 1fr; gap: 24px; }
+  .hero__right{ min-height: 46vh; order:-1; }
+  .hero__left{ min-height: auto; gap: 26px; }
+  .hero__footer{ grid-template-columns: 1fr 1fr; row-gap: 18px; }
+  .hero__scroll{ grid-column: 1 / -1; justify-self:start; }
+  .hero__bottom{ flex-direction: column; align-items: stretch; }
+}
+@media (max-width: 520px){
+  .hero__meta-right{ display:none; }
+  .hero__caption-r{ display:none; }
+}
+
+/* ───────── YELLOW STRIP ───────── */
+.marquee{
+  background:var(--saffron);
+  color:#1A1000;
+  overflow:hidden;
+  padding: 14px 0;
+  position:relative;
+  border-top:1px solid rgba(0,0,0,.04);
+  border-bottom:1px solid rgba(0,0,0,.04);
+}
+.marquee__track{
+  display:flex; gap:28px; align-items:center;
+  white-space:nowrap;
+  animation: marquee 40s linear infinite;
+  font-family:var(--serif);
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight:500;
+  letter-spacing:.005em;
+  width:max-content;
+}
+.marquee__track .dot{ font-size:.45em; opacity:.7; }
+.marquee__track .star{
+  display:inline-flex; width:14px; height:14px;
+  background: #1A1000;
+  -webkit-mask: radial-gradient(circle, transparent 1.5px, #000 2px) center/14px 14px no-repeat;
+          mask: radial-gradient(circle, transparent 1.5px, #000 2px) center/14px 14px no-repeat;
+  border-radius:50%;
+  opacity:.6;
+}
+@keyframes marquee{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-33.3333%); }
+}
+
+/* ───────── SHARED SECTIONS ───────── */
+section{ position:relative; }
+.section-head{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  display:flex; flex-direction:column; gap:14px;
+  margin-bottom: clamp(36px, 5vw, 60px);
+}
+.section-index{ display:inline-flex; align-items:center; gap:10px; }
+.section-title{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size: clamp(28px, 4.4vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -.02em;
+  color:var(--ink);
+  max-width: 22ch;
+}
+.section-title em{ color: var(--mute); font-style: italic; }
+.section-title .accent{ color: var(--saffron); font-style: italic; }
+.section-sub{
+  max-width: 58ch;
+  font-size: 14.5px;
+  color:var(--mute);
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+/* ───────── ABOUT ───────── */
+.about{ padding: clamp(72px, 9vw, 120px) 0; }
+.about__grid{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items:start;
+}
+.about__copy p{
+  font-size: 15.5px;
+  line-height:1.7;
+  color:var(--soft);
+}
+.about__copy p + p{ margin-top: 16px; }
+.about__copy .lead{
+  font-family:var(--serif);
+  font-size: clamp(20px, 1.9vw, 26px);
+  font-weight:400;
+  line-height:1.4;
+  color:var(--ink);
+  margin-bottom: 22px;
+  letter-spacing:-.005em;
+}
+.about__copy .lead strong{ font-weight:500; }
+
+.about__media{
+  display:flex; flex-direction:column; gap:18px;
+  position: sticky; top: 88px;
+}
+.about__img{
+  position:relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 2px;
+  overflow:hidden;
+  background: var(--cream);
+}
+.about__img svg{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  display:block;
+}
+.about__slide{
+  position:absolute; inset:0;
+  opacity:0;
+  transition: opacity 1.4s var(--ease-out);
+}
+.about__slide.is-active{ opacity:1; }
+.about__slide img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  transition: transform 1.4s var(--ease-out);
+}
+.about__img:hover .about__slide.is-active img{ transform: scale(1.04); }
+.about__img-fallback{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(255,255,255,.55), transparent 55%),
+    linear-gradient(125deg, #ECE6DC 0%, #D6C9AE 60%, #B89E76 100%);
+}
+.about__img-caption{
+  position:absolute; left:14px; bottom:12px;
+  font-family:var(--mono); font-size: 9.5px;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:#fff; text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+
+.about__card{
+  background: var(--cream);
+  border:1px solid var(--line);
+  border-radius: 2px;
+  padding: 20px 22px;
+  display:flex; flex-direction:column; gap:12px;
+  position:relative;
+}
+.about__card::before{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background: var(--saffron);
+}
+.principals{ list-style:none; display:flex; flex-direction:column; gap:8px; }
+.principals li{ display:flex; flex-direction:column; gap:1px; padding: 4px 0; }
+.p-name{ font-family:var(--serif); font-size: 19px; font-weight:500; color:var(--ink); }
+.p-role{
+  font-family:var(--mono); font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--mute);
+}
+
+@media (max-width:880px){
+  .about__grid{ grid-template-columns: 1fr; }
+  .about__media{ position:static; }
+}
+
+/* ───────── RANGE ───────── */
+.range{
+  padding: clamp(60px, 8vw, 110px) 0 clamp(72px, 9vw, 120px);
+  background: var(--cream);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.range__tabs{
+  max-width:var(--max);
+  margin: 0 auto clamp(24px, 4vw, 40px);
+  padding: 0 var(--pad);
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.tab:last-child{ border-right:0; }
+.tab{
+  text-align:left;
+  padding: 16px 18px;
+  display:flex; flex-direction:column; gap:4px;
+  position:relative;
+  border-right:1px solid var(--line);
+  transition: background .4s var(--ease);
+  overflow:hidden;
+}
+.tab:last-child{ border-right:0; }
+.tab::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px;
+  height:2px; background:var(--saffron);
+  transform: scaleX(0); transform-origin:left;
+  transition: transform .55s var(--ease-out);
+}
+.tab.is-active::after{ transform:scaleX(1); }
+.tab:hover{ background: rgba(255,255,255,.55); }
+.tab.is-active{ background: var(--paper); }
+.tab__num{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; color:var(--mute); }
+.tab__label{
+  font-family:var(--serif);
+  font-size: clamp(15px, 1.3vw, 20px);
+  font-weight:500; color:var(--ink);
+  letter-spacing: -.005em;
+}
+.tab__dot{
+  position:absolute; right:14px; top:18px;
+  width:8px; height:8px; border-radius:50%;
+  background: var(--line);
+  transition: background .35s var(--ease), transform .35s var(--ease);
+}
+.tab.is-active .tab__dot{ background: var(--saffron); transform: scale(1.2); }
+
+@media (max-width:720px){
+  .range__tabs{ grid-template-columns: 1fr 1fr; }
+  .tab{ border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .tab:nth-child(2n){ border-right:0; }
+  .tab:nth-child(5){ grid-column: 1 / -1; border-right:0; }
+}
+
+.range__panels{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  position:relative;
+}
+.panel{ display:none; animation: panelIn .6s var(--ease-out); }
+.panel.is-active{ display:block; }
+@keyframes panelIn{
+  from{ opacity:0; transform: translateY(10px); }
+  to{ opacity:1; transform:none; }
+}
+.panel__intro{
+  margin-bottom: 22px; max-width: 56ch;
+  display:flex; justify-content: space-between; align-items: baseline; gap: 24px;
+  flex-wrap: wrap;
+}
+.panel__lede{
+  font-family:var(--serif);
+  font-size: clamp(17px, 1.4vw, 21px);
+  color:var(--soft); line-height:1.45; font-style: italic;
+  max-width: 56ch;
+}
+.swatch-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.swatch{
+  background: var(--paper);
+  display:flex; flex-direction:column;
+  position:relative;
+  overflow:hidden;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  transition: transform .5s var(--ease-out), box-shadow .5s var(--ease);
+}
+.swatch:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px -28px rgba(0,0,0,.22);
+}
+.swatch__chip{
+  display:block;
+  aspect-ratio: 4 / 3;
+  position:relative; overflow:hidden;
+  background: var(--cream);
+}
+.swatch__chip svg{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  display:block;
+}
+.swatch__chip img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  transition: transform 1.1s var(--ease-out);
+}
+.swatch:hover .swatch__chip svg{ transform: scale(1.04); transition: transform 1.1s var(--ease-out); }
+.swatch:hover .swatch__chip img{ transform: scale(1.06); }
+.swatch__chip::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.22));
+  opacity:0; transition: opacity .4s var(--ease);
+}
+.swatch:hover .swatch__chip::after{ opacity:1; }
+.swatch__meta{
+  padding: 14px 16px 16px;
+  display:flex; flex-direction:column; gap:4px;
+  border-top: 1px solid var(--line-soft);
+}
+.swatch__meta h3{
+  font-family:var(--serif);
+  font-size: 20px; font-weight:500; line-height:1.15;
+  color:var(--ink); letter-spacing: -.005em;
+}
+.swatch__meta p{ font-size: 12.5px; color:var(--mute); line-height:1.5; }
+.swatch__cta{
+  margin-top: 10px;
+  font-family:var(--mono); font-size: 9.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--saffron-deep);
+  display:inline-flex; align-items:center; gap:6px;
+  align-self:flex-start;
+  cursor:pointer;
+}
+.swatch__cta .arr{ transition: transform .35s var(--ease); display:inline-block; }
+.swatch:hover .swatch__cta .arr{ transform: translateX(3px); }
+
+/* fallback stone colours */
+.s-sand-white   { background: linear-gradient(135deg,#F5EFE2,#ECE3D0); }
+.s-sand-beige   { background: linear-gradient(135deg,#E2CFA5,#C9B181); }
+.s-sand-red     { background: linear-gradient(135deg,#C2502C,#9B3A1E); }
+.s-sand-pink    { background: linear-gradient(135deg,#E8B79E,#D69479); }
+.s-gran-black   { background: linear-gradient(135deg,#1a1816,#0a0908); }
+.s-gran-pwhite  { background: linear-gradient(135deg,#ECE6DC,#D8D0C2); }
+.s-gran-azul    { background: linear-gradient(135deg,#6E8AA8,#45607E); }
+.s-gran-awhite  { background: linear-gradient(135deg,#F3ECDC,#E2D7BF); }
+.s-gran-agold   { background: linear-gradient(135deg,#E5C58B,#C9A258); }
+.s-qz-crystallo { background: linear-gradient(135deg,#F4F6F8,#DBE2E8); }
+.s-qz-bluedunes { background: linear-gradient(135deg,#D9E2EC,#A8BFD8); }
+.s-qz-patagonia { background: linear-gradient(135deg,#B8A26A,#7C6E3A); }
+.s-eng-calacatta { background: linear-gradient(135deg,#FBFAF7,#ECEAE3); }
+.s-eng-sparkle  { background: linear-gradient(135deg,#2A2826,#1A1816); }
+.s-eng-calacattagold { background: linear-gradient(135deg,#FBFAF7,#F5E6C4); }
+.s-eng-antiquegold { background: linear-gradient(135deg,#EFECE6,#DFD8CA); }
+.s-eng-venetiangold { background: linear-gradient(135deg,#F7F5EE,#EBE6D8); }
+.s-eng-dazzlegrey { background: linear-gradient(135deg,#DFE2E5,#BFC4C9); }
+.s-eng-lirigrey { background: linear-gradient(135deg,#F8F8F9,#E1E2E5); }
+.s-eng-carrarahilos { background: linear-gradient(135deg,#FAFAFB,#ECECEF); }
+.s-eng-blacksparkle { background: linear-gradient(135deg,#1C1A19,#0A0807); }
+.s-eng-whitesparkle { background: linear-gradient(135deg,#FFFFFF,#F0F1F4); }
+.s-eng-mapplewhite { background: linear-gradient(135deg,#FDFDFE,#F2F3F5); }
+.s-eng-purewhite { background: linear-gradient(135deg,#FFFFFF,#FAFAFA); }
+
+.range__note{
+  max-width:var(--max);
+  margin: clamp(28px, 4vw, 40px) auto 0;
+  padding: 0 var(--pad);
+  display:flex; align-items:center; gap:14px;
+  flex-wrap:wrap;
+}
+.range__note .mono{ color: var(--soft); }
+.range__note .ghost-link{
+  font-family:var(--serif); font-style: italic; font-size: 18px;
+  color: var(--ink); border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+
+/* ───────── CAPABILITIES (interactive viewer) ───────── */
+.caps{ padding: clamp(72px, 9vw, 120px) 0; }
+.caps__viewer{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  display:grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+.caps__lists{ display:flex; flex-direction:column; gap: 36px; }
+.caps__label{ display:block; margin-bottom: 12px; }
+.caps__list{ list-style:none; }
+.caps__list li{
+  display:grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 0;
+  border-top:1px solid var(--line);
+  position:relative;
+  cursor:pointer;
+  transition: padding .35s var(--ease), color .35s var(--ease);
+}
+.caps__list li:last-child{ border-bottom:1px solid var(--line); }
+.caps__list li::before{
+  content:""; position:absolute; left:-100%; top:0; bottom:0; width:100%;
+  background: var(--warm);
+  transition: left .55s var(--ease-out);
+  z-index:-1;
+}
+.caps__list li:hover::before{ left:0; }
+.caps__list li:hover{ padding-left: 10px; }
+.caps__list li.is-active{ padding-left: 10px; }
+.caps__list li.is-active::before{ left:0; background: var(--saffron-soft); }
+.caps__list li.is-active .caps__name{ color: var(--saffron-deep); }
+.caps__num{ font-family:var(--mono); font-size:10px; color:var(--mute); letter-spacing:.14em; }
+.caps__name{
+  font-family:var(--serif); font-size: clamp(20px, 1.7vw, 26px);
+  font-weight:500; color:var(--ink); line-height:1.1;
+  letter-spacing: -.005em;
+  transition: color .3s var(--ease);
+}
+.caps__hint{
+  font-family:var(--mono); font-size: 9.5px; color: var(--mute);
+  letter-spacing: .14em;
+}
+.caps__list li.is-active .caps__hint{ color: var(--saffron-deep); }
+
+.caps__stage{
+  position: sticky; top: 88px;
+  aspect-ratio: 4 / 5;
+  border-radius: 2px;
+  overflow:hidden;
+  background: var(--cream);
+}
+.caps__stage-img,
+.caps__stage-img-wrap{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition: opacity .6s var(--ease-out);
+}
+.caps__stage-img-wrap svg,
+.caps__stage-img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+.caps__stage-img.is-active,
+.caps__stage-img-wrap.is-active{ opacity:1; }
+.caps__stage-fallback{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(255,255,255,.45), transparent 50%),
+    linear-gradient(135deg, #D8C6A0, #A98D5E);
+}
+.caps__stage-overlay{
+  position:absolute; left:18px; right:18px; bottom:18px;
+  color:#fff; z-index:2;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  text-shadow: 0 2px 14px rgba(0,0,0,.55);
+}
+.caps__stage-overlay .name{
+  font-family:var(--serif); font-style:italic; font-size: 22px;
+}
+.caps__stage-overlay .mono{ color: rgba(255,255,255,.85); }
+.caps__stage-overlay .desc{
+  font-size: 13px; color: rgba(255,255,255,.85);
+  max-width: 24ch; text-align:right;
+  text-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+
+@media (max-width:880px){
+  .caps__viewer{ grid-template-columns: 1fr; gap: 16px; }
+  .caps__stage{
+    position: sticky;
+    top: 79px;
+    z-index: 20;
+    width: 100%;
+    box-sizing: border-box;
+    aspect-ratio: 3 / 2;
+    max-height: 240px;
+    order: -1;
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    margin-bottom: 8px;
+    border: 1px solid var(--line);
+    background: var(--cream);
+  }
+  .caps__stage-overlay{
+    left: 12px; right: 12px; bottom: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .caps__stage-overlay .name{
+    font-size: 18px;
+  }
+  .caps__stage-overlay .desc{
+    text-align: left;
+    max-width: 100%;
+    font-size: 11.5px;
+    line-height: 1.3;
+  }
+}
+
+
+/* ───────── BESPOKE (interactive viewer) ───────── */
+.bespoke{
+  padding: clamp(72px, 9vw, 120px) 0;
+  background: var(--ink);
+  color: #F5EFE2;
+}
+.bespoke .section-title,
+.bespoke .section-title em{ color:#F5EFE2; }
+.bespoke .section-title em{ color: rgba(245,239,226,.55); }
+.bespoke .mono{ color: rgba(245,239,226,.55); }
+.bespoke .section-sub{ color: rgba(245,239,226,.6); }
+
+.bespoke__viewer{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  display:grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+.bespoke__list{
+  list-style:none;
+  border-top: 1px solid rgba(245,239,226,.15);
+}
+.bespoke__item{
+  display:grid;
+  grid-template-columns: 36px 1fr auto;
+  column-gap: 14px;
+  row-gap: 4px;
+  align-items: baseline;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(245,239,226,.15);
+  position:relative;
+  transition: padding .5s var(--ease);
+  cursor:pointer;
+}
+.bespoke__item::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px;
+  height:1px; background: var(--saffron);
+  transform: scaleX(0); transform-origin:left;
+  transition: transform .5s var(--ease-out);
+}
+.bespoke__item:hover{ padding-left: 12px; }
+.bespoke__item.is-active{ padding-left: 12px; }
+.bespoke__item.is-active::after{ transform: scaleX(1); }
+.bespoke__num{ color: rgba(245,239,226,.4); }
+.bespoke__title{
+  font-family:var(--serif); font-weight:400;
+  font-size: clamp(22px, 2.3vw, 30px);
+  letter-spacing:-.012em; line-height:1.05;
+  color:#F5EFE2;
+}
+.bespoke__title .serif-italic{ color: var(--saffron); padding: 0 .1em; font-style: italic; }
+.bespoke__hint{
+  font-family:var(--mono); font-size: 9.5px; color: rgba(245,239,226,.4);
+  letter-spacing:.14em;
+}
+.bespoke__item.is-active .bespoke__hint{ color: var(--saffron); }
+.bespoke__desc{
+  grid-column: 2 / 3;
+  font-size: 13.5px; color: rgba(245,239,226,.6);
+  max-width: 42ch; line-height: 1.55; margin-top: 2px;
+}
+
+.bespoke__stage{
+  position:relative; position: sticky; top: 88px;
+  aspect-ratio: 4 / 5;
+  border-radius: 2px;
+  overflow:hidden;
+  background: #1a1a1a;
+}
+.bespoke__stage-img,
+.bespoke__stage-img-wrap{
+  position:absolute; inset:0;
+  width:100%; height:100%; object-fit:cover;
+  opacity:0;
+  transition: opacity .6s var(--ease-out);
+}
+.bespoke__stage-img-wrap svg{ width:100%; height:100%; display:block; }
+.bespoke__stage-img.is-active,
+.bespoke__stage-img-wrap.is-active{ opacity:.95; }
+.bespoke__stage-fallback{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(255,255,255,.18), transparent 55%),
+    linear-gradient(135deg, #2a2826, #0a0908);
+}
+.bespoke__stage-overlay{
+  position:absolute; left:18px; right:18px; bottom:18px;
+  z-index:2; color:#fff;
+  display:flex; justify-content: space-between; align-items: flex-end;
+  text-shadow: 0 2px 14px rgba(0,0,0,.55);
+}
+.bespoke__stage-overlay .name{
+  font-family:var(--serif); font-style:italic; font-size: 22px;
+}
+
+@media (max-width:880px){
+  .bespoke__viewer{ grid-template-columns: 1fr; gap: 16px; }
+  .bespoke__stage{
+    position: sticky;
+    top: 79px;
+    z-index: 20;
+    width: 100%;
+    box-sizing: border-box;
+    aspect-ratio: 4 / 3;
+    max-height: 240px;
+    order: -1;
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #121212;
+  }
+  .bespoke__stage-overlay{
+    left: 12px; right: 12px; bottom: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .bespoke__stage-overlay .name{
+    font-size: 18px;
+  }
+  .bespoke__stage-overlay .mono{
+    font-size: 9px;
+  }
+  
+  .bespoke__desc {
+    display: block !important;
+    grid-column: 2 / 4;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: rgba(245,239,226,.65);
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s var(--ease), opacity 0.4s var(--ease), margin-top 0.4s var(--ease);
+  }
+  .bespoke__item.is-active .bespoke__desc {
+    max-height: 70px;
+    opacity: 1;
+    margin-top: 6px;
+  }
+}
+
+
+/* ───────── CONTACT (CTA + modal) ───────── */
+.contact{
+  padding: clamp(72px, 9vw, 120px) 0;
+  background: var(--paper);
+  position:relative;
+}
+.contact::before{
+  content:""; position:absolute; left:0; right:0; top:0; height:4px;
+  background: var(--saffron);
+}
+.contact__inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+}
+.contact__grid{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(36px, 5vw, 80px);
+  align-items: start;
+}
+.contact__lede{
+  font-family:var(--serif); font-style: italic;
+  font-size: clamp(17px, 1.5vw, 21px);
+  color:var(--soft); max-width: 50ch; line-height:1.45;
+  margin-top: 12px;
+}
+.contact__cta{
+  margin-top: 28px;
+  display:inline-flex; align-items:center; gap: 12px;
+  padding: 18px 28px 18px 32px;
+  background: var(--ink); color: var(--paper);
+  border-radius: 999px;
+  font-size: 14px; letter-spacing: .02em;
+  transition: background .35s var(--ease), gap .35s var(--ease);
+  cursor:pointer;
+}
+.contact__cta:hover{ background: var(--saffron-deep); gap: 18px; }
+.contact__cta .arr{ display:inline-block; }
+
+.contact__info{
+  display:flex; flex-direction:column; gap: 22px;
+  padding-top: 8px;
+  border-top:1px solid var(--line);
+}
+.contact__block{ display:flex; flex-direction:column; gap:6px; padding-top: 18px; }
+.contact__block + .contact__block{ border-top: 1px solid var(--line); }
+.contact__block .mono{ margin-bottom: 8px; }
+.contact__link{
+  font-family:var(--serif);
+  font-size: clamp(17px, 1.35vw, 20px);
+  font-weight:500; color:var(--ink);
+  letter-spacing:-.005em;
+  position:relative; align-self:flex-start;
+  padding-bottom: 2px;
+  transition: color .3s var(--ease);
+  word-break: break-word;
+}
+.contact__link::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+  background: var(--ink);
+  transform: scaleX(0); transform-origin:left;
+  transition: transform .5s var(--ease-out);
+}
+.contact__link:hover{ color: var(--saffron-deep); }
+.contact__link:hover::after{ transform: scaleX(1); background: var(--saffron-deep); }
+.contact__link--sub{
+  font-size: clamp(14px, 1.05vw, 16px);
+  font-weight:400; color: var(--soft);
+}
+
+@media (max-width:780px){
+  .contact__grid{ grid-template-columns: 1fr; }
+}
+
+/* ───────── Modal ───────── */
+.modal{
+  position:fixed; inset:0; z-index:80;
+  display:flex; align-items:center; justify-content:center;
+  padding: var(--pad);
+  background: rgba(20,18,15,.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity:0; visibility:hidden;
+  transition: opacity .35s var(--ease), visibility .35s;
+}
+.modal.is-open{ opacity:1; visibility:visible; }
+.modal__card{
+  background: var(--paper);
+  border-radius: 4px;
+  width: min(640px, 100%);
+  max-height: 90vh;
+  overflow:auto;
+  position:relative;
+  border:1px solid var(--line);
+  transform: translateY(20px) scale(.98);
+  transition: transform .45s var(--ease-out);
+  box-shadow: 0 40px 100px -30px rgba(0,0,0,.45);
+}
+.modal.is-open .modal__card{ transform: translateY(0) scale(1); }
+.modal__top{
+  position: sticky; top:0; z-index:2;
+  background: var(--paper);
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid var(--line);
+  display:flex; justify-content: space-between; align-items: flex-start;
+}
+.modal__top::before{
+  content:""; position:absolute; left:0; right:0; top:0; height:3px;
+  background: var(--saffron);
+}
+.modal__title{
+  font-family:var(--serif);
+  font-size: 28px;
+  font-weight:500;
+  line-height: 1.1; letter-spacing: -.01em;
+  color: var(--ink);
+}
+.modal__sub{
+  font-family:var(--mono); font-size: 10px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--mute);
+  margin-top: 8px;
+}
+.modal__close{
+  width: 36px; height: 36px; border-radius:50%;
+  border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  background: var(--paper);
+  transition: background .3s var(--ease);
+  font-size: 18px; color: var(--soft);
+}
+.modal__close:hover{ background: var(--warm); }
+.modal__body{ padding: 22px 24px 26px; }
+
+.form{ display:flex; flex-direction:column; gap: 16px; }
+.form__row{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 520px){ .form__row{ grid-template-columns: 1fr; } }
+.field{ display:flex; flex-direction:column; gap:6px; }
+.field label{
+  font-family:var(--mono); font-size: 10px; letter-spacing:.14em;
+  text-transform:uppercase; color: var(--mute);
+}
+.field input,
+.field textarea,
+.field select{
+  border:1px solid var(--line);
+  background: var(--paper);
+  padding: 11px 12px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: var(--ink);
+  transition: border-color .25s var(--ease), background .25s var(--ease);
+  font-family: var(--sans);
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  outline: none;
+  border-color: var(--ink);
+  background: #fff;
+}
+.field textarea{ resize: vertical; min-height: 96px; }
+.field select{
+  appearance: none; -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--soft) 50%), linear-gradient(135deg, var(--soft) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 32px;
+}
+
+.form__submit{
+  margin-top: 6px;
+  display:inline-flex; align-items:center; justify-content:center;
+  gap: 10px;
+  padding: 14px 22px;
+  background: var(--ink); color: var(--paper);
+  border-radius: 999px;
+  font-size: 13px; letter-spacing: .04em;
+  cursor: pointer;
+  transition: background .3s var(--ease), gap .3s var(--ease);
+}
+.form__submit:hover{ background: var(--saffron-deep); gap: 16px; }
+.form__hint{
+  font-family:var(--mono); font-size: 9.5px;
+  letter-spacing:.14em; text-transform:uppercase;
+  color: var(--mute);
+  text-align: center;
+  margin-top: 8px;
+}
+.form__hint a{ color: var(--saffron-deep); }
+
+/* ───────── FOOTER ───────── */
+.foot{
+  background: var(--cream);
+  border-top:1px solid var(--line);
+  padding: 56px var(--pad) 28px;
+  position:relative;
+  overflow:hidden;
+}
+.foot__grid{
+  max-width: var(--max);
+  margin: 0 auto 32px;
+  display:grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: start;
+}
+.foot__brand{ display:flex; align-items:center; gap: 14px; }
+.foot__logo{
+  width: 80px; height: 80px; border-radius: 6px;
+  background: var(--saffron);
+  overflow:hidden; box-shadow: 0 0 0 1px rgba(0,0,0,.06);
+  display:flex; align-items:center; justify-content:center;
+}
+.foot__logo img{ width:100%; height:100%; object-fit: contain; }
+.foot__brand-text{ display:flex; flex-direction:column; }
+.foot__brand-text .name{
+  font-family:var(--serif); font-size: 24px; font-weight:500; letter-spacing: -.005em;
+}
+.foot__brand-text .role{
+  font-family:var(--mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color: var(--mute); margin-top: 3px;
+}
+.foot__col h4{
+  font-family:var(--mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--mute); font-weight:400;
+  margin-bottom: 12px;
+}
+.foot__col ul{ list-style:none; display:flex; flex-direction:column; gap: 8px; }
+.foot__col li{ font-size: 14px; color: var(--soft); }
+.foot__col li a{ transition: color .25s var(--ease); }
+.foot__col li a:hover{ color: var(--ink); }
+
+.foot__wordmark{
+  font-family:var(--serif);
+  font-size: clamp(28px, 8vw, 110px);
+  letter-spacing:-.02em;
+  line-height:.92;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(14,14,14,.16);
+  text-align:center;
+  margin-bottom: 16px;
+  user-select:none;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.foot__row{
+  max-width: var(--max);
+  margin:0 auto;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 16px;
+  flex-wrap:wrap;
+  border-top:1px solid var(--line);
+  padding-top: 18px;
+}
+
+@media (max-width: 780px){
+  .foot__grid{ grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ───────── REVEAL ───────── */
+.reveal{
+  opacity:0;
+  transform: translateY(16px);
+  transition: opacity .9s var(--ease-out), transform .9s var(--ease-out);
+}
+.reveal.is-in{ opacity:1; transform:none; }
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+/* ───────── Decorative section dividers ───────── */
+.section-divider{
+  display:flex; align-items:center; justify-content:center;
+  gap: 14px;
+  padding: 0 var(--pad);
+  max-width: var(--max); margin: 0 auto;
+}
+.section-divider .line{ flex:1; height:1px; background: var(--line); }
+
+/* ───────── Hero slideshow ───────── */
+.hero__slides{ position:absolute; inset:0; }
+.hero__slide{
+  position:absolute; inset:0;
+  opacity:0;
+  transition: opacity 1.4s var(--ease-out);
+}
+.hero__slide.is-active{ opacity:1; }
+.hero__slide img{ width:100%; height:100%; object-fit:cover; }
+.hero__slide-fallback{ position:absolute; inset:0; }
+
+.hero__progress{
+  position:absolute; left:18px; right:18px; top:18px;
+  display:flex; gap:8px; z-index:3;
+}
+.hero__progress span{
+  flex:1; height:2px; background:rgba(255,255,255,.32);
+  border-radius:2px; overflow:hidden;
+  position:relative;
+}
+.hero__progress span::after{
+  content:""; position:absolute; inset:0;
+  background: var(--saffron);
+  transform: scaleX(0); transform-origin:left;
+}
+.hero__progress span.is-active::after{
+  animation: progressBar 5s linear forwards;
+}
+@keyframes progressBar{ to { transform: scaleX(1); } }
+
+.hero__caption .meta-row{
+  display:flex; align-items:center; gap:10px;
+  font-family:var(--mono); font-size:10px;
+  letter-spacing:.14em; text-transform:uppercase;
+  color: rgba(255,255,255,.85);
+  margin-bottom: 6px;
+}
+.hero__caption .star{ color: var(--saffron); }
+
+/* nav brand spacing fix */
+.nav__brand-text{ gap: 4px; }
+.nav__brand-name{ letter-spacing: .015em; }
+.nav__brand-sub{ letter-spacing: .22em; }
+
+/* ───────── Language picker ───────── */
+.lang{ position:relative; }
+.lang__btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:9px 12px 9px 14px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-family:var(--mono); font-size:10px;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--soft);
+  background: var(--paper);
+  transition: background .25s var(--ease), border-color .25s var(--ease);
+  white-space: nowrap;
+}
+.lang__btn:hover{ background: var(--warm); border-color: var(--ink); }
+.lang__btn .globe{ width:13px; height:13px; opacity:.7; }
+.lang__btn .caret{ font-size: 9px; opacity:.5; }
+.lang__menu{
+  position:absolute; right:0; top:calc(100% + 8px);
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius: 4px;
+  padding: 6px;
+  min-width: 220px;
+  max-height: 70vh;
+  overflow-y: auto;
+  opacity:0; visibility:hidden;
+  transform: translateY(-6px);
+  transition: opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
+  z-index:70;
+  box-shadow: 0 22px 50px -22px rgba(0,0,0,.22);
+}
+.lang.is-open .lang__menu{ opacity:1; visibility:visible; transform: translateY(0); }
+.lang__menu button{
+  display:flex; width:100%; align-items:center; justify-content:space-between;
+  padding:9px 10px; border-radius: 2px;
+  font-size:13px; text-align:left;
+  transition: background .2s var(--ease);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+.lang__menu button:hover{ background: var(--cream); }
+.lang__menu button.is-active{ color: var(--saffron-deep); }
+.lang__menu .mono{ font-size: 9.5px; }
+
+@media (max-width:860px){
+  .lang{ display:none; }
+}
+
+/* ───────── Reviews ───────── */
+.reviews{
+  padding: clamp(72px, 9vw, 120px) 0;
+  background: var(--cream);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  position:relative;
+}
+.reviews__head{
+  max-width:var(--max); margin: 0 auto;
+  padding: 0 var(--pad);
+  display:flex; justify-content: space-between; align-items: flex-end;
+  flex-wrap:wrap; gap: 20px;
+  margin-bottom: clamp(32px, 4vw, 50px);
+}
+.reviews__head-l{ display:flex; flex-direction:column; gap: 12px; max-width: 38ch; }
+.reviews__rating{
+  display:flex; align-items:center; gap: 10px;
+}
+.reviews__rating .stars{ color: var(--saffron); font-size: 16px; letter-spacing: 2px; }
+.reviews__rating .num{
+  font-family:var(--serif); font-size: 24px; color: var(--ink); font-weight: 500;
+}
+.reviews__rating .sub{ font-family:var(--mono); font-size: 10px; letter-spacing: .14em; text-transform:uppercase; color: var(--mute); }
+
+.reviews__grid{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.review{
+  background: var(--paper);
+  border:1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px 22px 20px;
+  display:flex; flex-direction:column; gap: 14px;
+  position:relative;
+  transition: transform .5s var(--ease-out), box-shadow .5s var(--ease);
+}
+.review:hover{ transform: translateY(-3px); box-shadow: 0 22px 50px -28px rgba(0,0,0,.18); }
+.review__stars{ display:flex; gap:3px; color: var(--saffron); font-size: 13px; line-height: 1; letter-spacing: 2px; }
+.review__quote{
+  font-family:var(--serif);
+  font-size: 17px;
+  line-height:1.45;
+  color: var(--ink);
+  font-style: italic;
+  letter-spacing: -.005em;
+  flex:1;
+}
+.review__quote::before{
+  content:"\201C"; font-size: 36px; line-height: 0;
+  vertical-align: -10px; margin-right: 2px;
+  color: var(--saffron-deep); font-family: var(--serif);
+}
+.review__meta{
+  display:flex; justify-content: space-between; align-items: baseline;
+  padding-top: 12px; border-top: 1px solid var(--line-soft);
+}
+.review__name{ font-family:var(--sans); font-size: 13px; font-weight: 500; color: var(--ink); }
+.review__loc{ font-family:var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+
+@media (max-width:880px){ .reviews__grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px){ .reviews__grid{ grid-template-columns: 1fr; } }
+
+/* ───────── Certifications ───────── */
+.certs{
+  padding: clamp(56px, 7vw, 88px) 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.certs__strip{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: center;
+}
+.certs__label{ display:flex; flex-direction:column; gap:8px; }
+.certs__label h3{
+  font-family:var(--serif); font-size: clamp(22px,2vw,28px); font-weight: 500;
+  color: var(--ink); line-height: 1.15; max-width: 22ch;
+  letter-spacing: -.005em;
+}
+.certs__items{
+  display:flex; gap: 14px; flex-wrap:wrap;
+  align-items: stretch;
+}
+.cert{
+  display:flex; flex-direction:column; gap: 8px; align-items: center;
+  text-align: center;
+  padding: 20px 18px 16px;
+  border:1px solid var(--line); border-radius: 4px;
+  background: var(--cream);
+  min-width: 150px;
+  flex: 1 1 160px;
+  transition: transform .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
+}
+.cert:hover{ transform: translateY(-2px); border-color: var(--saffron); background: var(--paper); }
+.cert__logo{
+  width: 96px; height: 96px;
+  display:flex; align-items:center; justify-content:center;
+  background: var(--paper);
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  position:relative;
+  overflow:hidden;
+  margin-bottom: 4px;
+}
+.cert__logo img{
+  width: 100%; height: 100%; object-fit: contain;
+  padding: 10px;
+}
+.cert__logo .cert__placeholder{
+  display:none;
+  font-family: var(--serif);
+  font-size: 22px; font-weight: 500;
+  color: var(--saffron-deep);
+  letter-spacing: -.01em;
+}
+.cert__logo.is-placeholder{
+  background: var(--cream);
+  border-style: dashed;
+}
+.cert__logo.is-placeholder .cert__placeholder{ display:inline; }
+.cert__icon{ width: 32px; height: 32px; color: var(--saffron-deep); }
+.cert__name{
+  font-family:var(--serif); font-size: 13px; font-weight:500; color: var(--ink);
+  line-height:1.15; margin-top: 2px;
+}
+.cert__sub{
+  font-family:var(--mono); font-size: 8.5px; letter-spacing:.14em;
+  text-transform:uppercase; color: var(--mute);
+}
+
+@media (max-width: 780px){
+  .certs__strip{ grid-template-columns: 1fr; }
+}
+
+/* ───────── AI Stone Advisor ───────── */
+.advisor{
+  padding: clamp(80px, 10vw, 130px) 0;
+  background: var(--paper);
+  position:relative;
+  overflow:hidden;
+}
+.advisor::before{
+  content:""; position:absolute; right: -160px; top: 60px;
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(242,163,16,.16), transparent 65%);
+  pointer-events:none;
+}
+.advisor__inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding: 0 var(--pad);
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: start;
+  position:relative;
+}
+.advisor__badge{
+  display:inline-flex; align-items:center; gap: 8px;
+  padding: 6px 10px 6px 8px;
+  border: 1px solid var(--saffron);
+  border-radius: 999px;
+  background: var(--saffron-soft);
+  margin-bottom: 14px;
+}
+.advisor__badge .sun-glyph{ width: 12px; height: 12px; }
+.advisor__badge .mono{ color: var(--saffron-deep); font-size: 9.5px; }
+.advisor__head h2{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -.02em;
+  color:var(--ink);
+  max-width: 16ch;
+}
+.advisor__head h2 em{ color: var(--saffron); font-style: italic; }
+.advisor__head p{
+  margin-top: 14px;
+  font-size: 14.5px; line-height: 1.6;
+  color: var(--mute); max-width: 38ch;
+}
+.advisor__panel{
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: clamp(20px, 3vw, 28px);
+  display:flex; flex-direction:column; gap: 16px;
+  position:relative;
+}
+.advisor__panel::before{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background: var(--saffron);
+  border-radius: 4px 0 0 4px;
+}
+.advisor__row{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width:520px){ .advisor__row{ grid-template-columns: 1fr; } }
+.chips{ display:flex; flex-wrap:wrap; gap: 6px; }
+.chip{
+  font-size: 12px; padding: 7px 12px;
+  border:1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  cursor:pointer;
+  transition: all .25s var(--ease);
+  font-family: var(--sans); color: var(--soft);
+}
+.chip:hover{ border-color: var(--ink); color: var(--ink); }
+.chip.is-active{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.advisor__submit{
+  margin-top: 4px;
+  display:inline-flex; align-items:center; justify-content:center; gap: 10px;
+  padding: 14px 22px;
+  background: var(--ink); color: var(--paper);
+  border-radius: 999px;
+  font-size: 13px; letter-spacing: .04em;
+  cursor: pointer;
+  transition: background .3s var(--ease), gap .3s var(--ease);
+  align-self:flex-start;
+}
+.advisor__submit:hover{ background: var(--saffron-deep); gap: 16px; }
+.advisor__submit[disabled]{ opacity:.55; cursor: wait; }
+.advisor__result{
+  display:none;
+  margin-top: 14px;
+  padding: 18px 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--soft);
+}
+.advisor__result.is-shown{ display:block; animation: panelIn .5s var(--ease-out); }
+.advisor__result strong{ color: var(--ink); font-weight: 500; }
+.advisor__result em{ color: var(--saffron-deep); font-style: normal; font-weight: 500; }
+.advisor__loader{
+  display:none; align-items:center; gap: 8px;
+  font-family:var(--mono); font-size: 10.5px; letter-spacing: .14em;
+  text-transform:uppercase; color: var(--saffron-deep);
+  margin-top: 10px;
+}
+.advisor__loader.is-shown{ display:inline-flex; }
+.advisor__loader .dot{ width:6px; height:6px; border-radius:50%; background: var(--saffron); animation: pulse 1.2s ease-in-out infinite; }
+.advisor__loader .dot:nth-child(2){ animation-delay: .2s; }
+.advisor__loader .dot:nth-child(3){ animation-delay: .4s; }
+@keyframes pulse{ 0%,100%{ transform: scale(1); opacity:.4; } 50%{ transform: scale(1.4); opacity:1; } }
+
+@media (max-width:880px){
+  .advisor__inner{ grid-template-columns: 1fr; }
+}
+
+/* Footer instagram */
+.foot__socials{ display:flex; gap: 10px; margin-top: 12px; }
+.foot__socials a{
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  display:inline-flex; align-items:center; justify-content:center;
+  transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+  color: var(--soft);
+}
+.foot__socials a:hover{ background: var(--saffron); color: #1a1000; border-color: var(--saffron); }
+.foot__socials svg{ width: 16px; height: 16px; }
+
+/* Principal mailto links */
+.principals li a{
+  display:inline-flex; flex-direction:column; gap:1px;
+  padding: 4px 0;
+  position:relative;
+}
+.p-name{
+  display:inline-flex; align-items:center; gap: 6px;
+  transition: color .3s var(--ease);
+}
+.p-name::after{
+  content:"→"; font-size: 14px; color: var(--saffron-deep);
+  transform: translateX(-4px); opacity:0;
+  transition: transform .35s var(--ease), opacity .35s var(--ease);
+  font-family: var(--serif);
+}
+.principals li a:hover .p-name{ color: var(--saffron-deep); }
+.principals li a:hover .p-name::after{ transform: translateX(0); opacity:1; }
+
+/* Translating overlay */
+.lang-overlay{
+  position:fixed; inset:0; z-index:90;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display:flex; align-items:center; justify-content:center;
+  flex-direction: column; gap: 14px;
+  opacity:0; visibility:hidden;
+  transition: opacity .3s var(--ease), visibility .3s;
+}
+.lang-overlay.is-shown{ opacity:1; visibility:visible; }
+.lang-overlay .label{
+  font-family:var(--mono); font-size: 11px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--saffron-deep);
+}
+.lang-overlay .spinner{
+  display:flex; gap: 8px;
+}
+.lang-overlay .spinner div{
+  width:10px; height: 10px; border-radius:50%;
+  background: var(--saffron); animation: pulse 1.2s ease-in-out infinite;
+}
+.lang-overlay .spinner div:nth-child(2){ animation-delay: .2s; }
+.lang-overlay .spinner div:nth-child(3){ animation-delay: .4s; }
+
+</style>
+</head>
+<body>
+
+<!-- ───── NAV ───── -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand" aria-label="Sunrise Natural Stones — home">
+      <span class="nav__logo"><img src="logo.png" alt="Sunrise Natural Stones logo"/></span>
+      <span class="nav__brand-text">
+        <span class="nav__brand-name">Sunrise Natural Stones</span>
+        <span class="nav__brand-sub">Marble · Granite · Quartz · Sandstone</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#range">Range</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#bespoke">Bespoke</a>
+      <a href="#advisor">Advisor</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang" id="langPicker">
+      <button class="lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+        <svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4.5" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+        <span id="langLabel">EN</span>
+        <span class="caret">▾</span>
+      </button>
+      <div class="lang__menu" id="langMenu">
+        <button data-lang="en" class="is-active"><span>English</span><span class="mono">EN</span></button>
+        <button data-lang="hi"><span>हिन्दी</span><span class="mono">HI</span></button>
+        <button data-lang="ar"><span>العربية</span><span class="mono">AR</span></button>
+        <button data-lang="zh"><span>中文 · Mandarin</span><span class="mono">ZH</span></button>
+        <button data-lang="ja"><span>日本語</span><span class="mono">JA</span></button>
+        <button data-lang="ko"><span>한국어</span><span class="mono">KO</span></button>
+        <button data-lang="de"><span>Deutsch</span><span class="mono">DE</span></button>
+        <button data-lang="fr"><span>Français</span><span class="mono">FR</span></button>
+        <button data-lang="it"><span>Italiano</span><span class="mono">IT</span></button>
+        <button data-lang="es"><span>Español</span><span class="mono">ES</span></button>
+        <button data-lang="pt"><span>Português</span><span class="mono">PT</span></button>
+        <button data-lang="ru"><span>Русский</span><span class="mono">RU</span></button>
+        <button data-lang="nl"><span>Nederlands</span><span class="mono">NL</span></button>
+        <button data-lang="pl"><span>Polski</span><span class="mono">PL</span></button>
+      </div>
+    </div>
+    <button class="nav__cta" data-open-modal>Request a sample <span class="arr">→</span></button>
+    <button class="nav__burger" id="burger" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<!-- ───── Mobile menu ───── -->
+<div class="menu" id="menu" aria-hidden="true">
+  <button class="menu__close" id="menuClose" aria-label="Close menu">×</button>
+  <nav class="menu__links" aria-label="Mobile">
+    <a href="#about" data-close-menu><span>About</span><span class="mono">01</span></a>
+    <a href="#range" data-close-menu><span>Range</span><span class="mono">02</span></a>
+    <a href="#capabilities" data-close-menu><span>Capabilities</span><span class="mono">03</span></a>
+    <a href="#bespoke" data-close-menu><span>Bespoke</span><span class="mono">04</span></a>
+    <a href="#advisor" data-close-menu><span>Stone Advisor</span><span class="mono">05</span></a>
+    <a href="#contact" data-close-menu><span>Contact</span><span class="mono">06</span></a>
+  </nav>
+  <button class="menu__cta" data-open-modal data-close-menu>Request a sample →</button>
+</div>
+
+<!-- ───── HERO ───── -->
+<section class="hero" id="top" data-screen-label="01 Hero">
+  <div class="hero__meta">
+    <span class="hero__meta-loc"><span class="sun-glyph" aria-hidden="true"></span><span class="mono i18n" data-key="meta-loc">Udaipur · Rajasthan · India</span></span>
+    <span class="mono hero__meta-right i18n" data-key="meta-since">Stone Exporters · 25+ Years</span>
+  </div>
+
+  <div class="hero__grid">
+    <div class="hero__left">
+      <div>
+        <span class="hero__eyebrow"><span class="mono i18n" data-key="hero-eyebrow">Marble · Granite · Quartz · Sandstone</span></span>
+        <h1 class="hero__title">
+          <span class="line i18n" data-key="hero-line1">A stone is</span>
+          <span class="line i18n" data-key="hero-line2"><em>forever.</em></span>
+          <span class="line i18n" data-key="hero-line3">We help you choose the right one.</span>
+        </h1>
+      </div>
+
+      <div class="hero__bottom">
+        <div>
+          <p class="hero__tagline i18n" data-key="hero-tagline">
+            <strong>Sunrise Natural Stones</strong> &mdash; over twenty-five years of supplying marble, granite, quartz and sandstone from Udaipur to architects, fabricators and developers in more than thirty countries.
+          </p>
+          <div class="hero__pills">
+            <span class="pill">Italian &amp; Indian Marble</span>
+            <span class="pill">Granite</span>
+            <span class="pill">Quartz</span>
+            <span class="pill">Sandstone</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__right">
+      <div class="hero__slides" id="heroSlides">
+        <div class="hero__slide is-active" data-slide="0">
+          <video id="heroVideo" src="assets/video/sunrisevideo11.mp4" autoplay muted playsinline preload="auto" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+        </div>
+        <div class="hero__slide" data-slide="1">
+          <img src="assets/images/hero/hero-photo-2.jpg" alt="Sunrise Natural Stones - crafting" style="width:100%; height:100%; object-fit:cover; display:block;"/>
+        </div>
+        <div class="hero__slide" data-slide="2">
+          <img src="assets/images/hero/hero-photo-3.jpg" alt="Sunrise Natural Stones - showroom" style="width:100%; height:100%; object-fit:cover; display:block;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__footer">
+    <div class="hero__stat"><span class="num">25+</span><span class="lab i18n" data-key="stat-years">Years exporting</span></div>
+    <div class="hero__stat"><span class="num">30+</span><span class="lab i18n" data-key="stat-countries">Countries shipped</span></div>
+    <div class="hero__stat"><span class="num">∞</span><span class="lab i18n" data-key="stat-projects">Projects, made possible</span></div>
+    <div class="hero__scroll">
+      <span class="mono i18n" data-key="scroll">Scroll</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ───── YELLOW STRIP ───── -->
+<section class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Marble</span><span class="dot">●</span><span>Granite</span><span class="dot">●</span><span>Quartz</span><span class="dot">●</span><span>Sandstone</span><span class="dot">●</span><span>25+ years of export experience</span><span class="dot">●</span>
+    <span>Marble</span><span class="dot">●</span><span>Granite</span><span class="dot">●</span><span>Quartz</span><span class="dot">●</span><span>Sandstone</span><span class="dot">●</span><span>25+ years of export experience</span><span class="dot">●</span>
+    <span>Marble</span><span class="dot">●</span><span>Granite</span><span class="dot">●</span><span>Quartz</span><span class="dot">●</span><span>Sandstone</span><span class="dot">●</span><span>25+ years of export experience</span><span class="dot">●</span>
+  </div>
+</section>
+
+<!-- ───── ABOUT ───── -->
+<section class="about" id="about" data-screen-label="02 About">
+  <div class="section-head">
+    <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="about-index">— 01 / About</span></span>
+    <h2 class="section-title i18n" data-key="about-title">Exporters of Indian<br/><em>natural stone.</em></h2>
+  </div>
+
+  <div class="about__grid">
+    <div class="about__copy reveal">
+      <p class="lead i18n" data-key="about-lead">Sunrise Natural Stones is an exporter of high-quality marble, granite, quartz and sandstone, headquartered in <strong>Udaipur, Rajasthan</strong>. For more than <strong>twenty-five years</strong>, we have supplied stone from Indian quarries to projects around the world.</p>
+      <p class="i18n" data-key="about-p1">We take great pride in the quality of our stones and would love the opportunity to provide you with the materials you need for your upcoming projects. Whether you are an architect specifying a single statement slab, a fabricator pricing a container, or a developer staging a full façade &mdash; we operate at every scale, with the same care.</p>
+      <p class="i18n" data-key="about-p2">Our work spans the entire pipeline: selection at the quarry, calibration and finishing under our supervision, packing and logistics. The promise is continuity &mdash; the same colour, the same vein direction, the same finish, delivered consistently across multiple shipments.</p>
+
+      <div class="about__card" style="margin-top:28px;">
+        <span class="mono i18n" data-key="about-principals">Principals · Write to us directly</span>
+        <ul class="principals">
+          <li><a href="mailto:deepak@sunrisenaturalstones.com"><span class="p-name">Deepak Paliwal</span><span class="p-role">Co-Founder · Operations · deepak@sunrisenaturalstones.com</span></a></li>
+          <li><a href="mailto:jeetu@sunrisenaturalstones.com"><span class="p-name">Jeetendra Jeswani</span><span class="p-role">Co-Founder · Exports · jeetu@sunrisenaturalstones.com</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about__media reveal">
+      <div class="about__img" id="aboutSlideshow">
+        <div class="about__slide is-active" data-about-slide="0">
+          <img src="assets/images/marble/marble-green.jpg" alt="Verde Guatemala Green Marble" />
+        </div>
+        <div class="about__slide" data-about-slide="1">
+          <img src="assets/images/marble/marble-onyx.png" alt="Indian Onyx Marble" />
+        </div>
+        <div class="about__slide" data-about-slide="2">
+          <img src="assets/images/granite/granite-black.jpg" alt="Indian Black Granite" />
+        </div>
+        <div class="about__slide" data-about-slide="3">
+          <img src="assets/images/sandstone/sandstone-woodland.png" alt="Woodland Sandstone" />
+        </div>
+        <div class="about__slide" data-about-slide="4">
+          <img src="assets/images/sandstone/sandstone-pencilline-grey.png" alt="Pencil Line Grey Sandstone" />
+        </div>
+        <div class="about__slide" data-about-slide="5">
+          <img src="assets/images/marble/marble-nirzerna.jpg" alt="Nizarna White Marble" />
+        </div>
+        <div class="about__slide" data-about-slide="6">
+          <img src="assets/images/granite/granite-alaska-gold.jpg" alt="Alaska Gold Granite" />
+        </div>
+        <div class="about__slide" data-about-slide="7">
+          <img src="assets/images/quartz/quartz-patagonia.jpg" alt="Patagonia Quartz" />
+        </div>
+        <span class="about__img-caption" id="aboutImageCaption">Verde Guatemala Marble</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── RANGE ───── -->
+<section class="range" id="range" data-screen-label="03 Range">
+  <div class="section-head">
+    <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="range-index">— 02 / The Range</span></span>
+    <h2 class="section-title i18n" data-key="range-title" style="max-width:none; white-space:nowrap;">Five families of <span class="accent">stone.</span></h2>
+    <p class="section-sub i18n" data-key="range-sub">25+ years of exporting natural stone. A selection from our catalogue &mdash; each variety is offered in slab, thick slab, block or cut-to-size. If a stone is not listed, ask, and we will source it.</p>
+  </div>
+
+  <div class="range__tabs" role="tablist">
+    <button class="tab is-active" role="tab" data-tab="marble" aria-selected="true">
+      <span class="tab__num">01</span><span class="tab__label">Marble</span><span class="tab__dot"></span>
+    </button>
+    <button class="tab" role="tab" data-tab="sandstone">
+      <span class="tab__num">02</span><span class="tab__label">Sandstone</span><span class="tab__dot"></span>
+    </button>
+    <button class="tab" role="tab" data-tab="granite">
+      <span class="tab__num">03</span><span class="tab__label">Granite</span><span class="tab__dot"></span>
+    </button>
+    <button class="tab" role="tab" data-tab="quartz">
+      <span class="tab__num">04</span><span class="tab__label">Quartz</span><span class="tab__dot"></span>
+    </button>
+    <button class="tab" role="tab" data-tab="engineered">
+      <span class="tab__num">05</span><span class="tab__label">Engineered Quartz</span><span class="tab__dot"></span>
+    </button>
+  </div>
+
+  <div class="range__panels">
+    <div class="panel is-active" data-panel="marble">
+      <div class="panel__intro">
+        <p class="panel__lede i18n" data-key="panel-marble">A curated selection of Indian marbles &mdash; pale whites, soft Onyx, deep greens and dramatic Panda White.</p>
+        <span class="mono">Selected varieties</span>
+      </div>
+      <div class="swatch-grid"><article class="swatch"><span class="swatch__chip"><img loading="lazy" src="assets/images/marble/marble-nirzerna.jpg" alt="Nirzerna marble"/></span><div class="swatch__meta"><span class="mono">Marble · 01</span><h3>Nirzerna</h3><p>Pale ivory ground with soft, restrained veining.</p><button class="swatch__cta" data-open-modal data-product="Nirzerna Marble">Enquire <span class="arr">→</span></button></div></article><article class="swatch"><span class="swatch__chip"><img loading="lazy" src="assets/images/marble/marble-aagaria.jpg" alt="Aagaria marble"/></span><div class="swatch__meta"><span class="mono">Marble · 02</span><h3>Aagaria</h3><p>Warm cream with delicate grey-gold movement.</p><button class="swatch__cta" data-open-modal data-product="Aagaria Marble">Enquire <span class="arr">→</span></button></div></article><article class="swatch"><span class="swatch__chip"><img loading="lazy" src="assets/images/marble/marble-onyx.png" alt="Onyx (Indian) marble"/></span><div class="swatch__meta"><span class="mono">Marble · 03</span><h3>Onyx (Indian)</h3><p>Soft, layered, light-passing — quietly translucent.</p><button class="swatch__cta" data-open-modal data-product="Indian Onyx Marble">Enquire <span class="arr">→</span></button></div></article><article class="swatch"><span class="swatch__chip"><img loading="lazy" src="assets/images/marble/marble-green.jpg" alt="Green Marble marble"/></span><div class="swatch__meta"><span class="mono">Marble · 04</span><h3>Green Marble</h3><p>Deep forest green with white crystalline veining.</p><button class="swatch__cta" data-open-modal data-product="Green Marble">Enquire <span class="arr">→</span></button></div></article><article class="swatch"><span class="swatch__chip"><img loading="lazy" src="assets/images/marble/marble-pandawhite.webp" alt="Panda White marble"/></span><div class="swatch__meta"><span class="mono">Marble · 05</span><h3>Panda White</h3><p>Snow ground broken by bold, ink-black streaks.</p><button class="swatch__cta" data-open-modal data-product="Panda White Marble">Enquire <span class="arr">→</span></button></div></article></div>
+    </div>
+    <div class="panel" data-panel="sandstone">
+      <div class="panel__intro">
+        <p class="panel__lede i18n" data-key="panel-sandstone">Quarried across Rajasthan &mdash; soft to work, durable in the sun. The stone of palaces and pavements.</p>
+        <span class="mono">Selected varieties</span>
+      </div>
+      <div class="swatch-grid">
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/sandstone/sandstone-white.jpeg" alt="White Sandstone from Bhopal mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Sandstone · 01</span>
+            <h3>White Sandstone</h3>
+            <p>From the mines of Bhopal. Pale, even-grained — suits modern minimal façades.</p>
+            <button class="swatch__cta" data-open-modal data-product="White Sandstone">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/sandstone/sandstone-beige.jpg" alt="Beige Sandstone from Dholpur" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Sandstone · 02</span>
+            <h3>Beige Sandstone</h3>
+            <p>From Dholpur. Warm and quiet — the default of the desert.</p>
+            <button class="swatch__cta" data-open-modal data-product="Beige Sandstone">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/sandstone/sandstone-red.jpeg" alt="Red Sandstone in raw finish" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Sandstone · 03</span>
+            <h3>Red Sandstone</h3>
+            <p>Raw finish. Iron-rich, deep and earthen — a heritage classic.</p>
+            <button class="swatch__cta" data-open-modal data-product="Red Sandstone">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/sandstone/sandstone-pink.jpg" alt="Pink Sandstone honed finish from Dholpur" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Sandstone · 04</span>
+            <h3>Pink Sandstone</h3>
+            <p>From the mines of Dholpur, honed finish. Soft, romantic, distinctly Rajasthani.</p>
+            <button class="swatch__cta" data-open-modal data-product="Pink Sandstone">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/sandstone/sandstone-woodland.png" alt="Woodland Sandstone from Bijolia mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Sandstone · 05</span>
+            <h3>Woodland</h3>
+            <p>From the mines of Bijolia. Rich, layered wood-grain tones — warm and organic.</p>
+            <button class="swatch__cta" data-open-modal data-product="Woodland Sandstone">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/sandstone/sandstone-pencilline-grey.png" alt="Pencil Line Grey Sandstone from Bijolia mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Sandstone · 06</span>
+            <h3>Pencil Line Grey</h3>
+            <p>From the mines of Bijolia. Subtle horizontal veining on a pale grey canvas — refined and contemporary.</p>
+            <button class="swatch__cta" data-open-modal data-product="Pencil Line Grey Sandstone">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="panel" data-panel="granite">
+      <div class="panel__intro">
+        <p class="panel__lede i18n" data-key="panel-granite">Igneous, hard, eternal &mdash; from the deep blacks to the crystalline Alaska series.</p>
+        <span class="mono">Selected varieties</span>
+      </div>
+      <div class="swatch-grid">
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/granite/granite-black.jpg" alt="Black Granite from Devgarh mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Granite · 01</span>
+            <h3>Black Granite</h3>
+            <p>From the mines of Devgarh, Rajasthan. Deep, dense obsidian black with subtle grey-gold crystalline speckles.</p>
+            <button class="swatch__cta" data-open-modal data-product="Black Granite">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/granite/granite-pwhite.webp" alt="P White Granite from Sirohi mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Granite · 02</span>
+            <h3>P White Granite</h3>
+            <p>From the mines of Sirohi, Rajasthan. Classic bright white base punctuated by clean black and charcoal speckles.</p>
+            <button class="swatch__cta" data-open-modal data-product="P White Granite">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/granite/granite-alaska-azul.webp" alt="Alaska Azul Granite from Beawar/Bhilwara mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Granite · 03</span>
+            <h3>Alaska Azul</h3>
+            <p>From the mines of Beawar/Bhilwara, Rajasthan. Dynamic cream-white quartz run through with blue-grey veins and dark mineral pockets.</p>
+            <button class="swatch__cta" data-open-modal data-product="Alaska Azul Granite">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/granite/granite-alaska-white.jpg" alt="Alaska White Granite from Beawar/Bhilwara mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Granite · 04</span>
+            <h3>Alaska White</h3>
+            <p>From the mines of Beawar/Bhilwara, Rajasthan. Brilliant frosty white ice crystals interspersed with warm brown and obsidian accents.</p>
+            <button class="swatch__cta" data-open-modal data-product="Alaska White Granite">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/granite/granite-alaska-gold.jpg" alt="Alaska Gold Granite from Beawar/Bhilwara mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Granite · 05</span>
+            <h3>Alaska Gold</h3>
+            <p>From the mines of Beawar/Bhilwara, Rajasthan. Luxurious warm golden and amber tones blended with crystalline ivory and dramatic dark veining.</p>
+            <button class="swatch__cta" data-open-modal data-product="Alaska Gold Granite">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/granite/granite-blue-dunes.jpg" alt="Blue Dunes Granite from Beawar/Bhilwara mines" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Granite · 06</span>
+            <h3>Blue Dunes</h3>
+            <p>From the mines of Beawar/Bhilwara, Rajasthan. Earthy olive and sand dunes swept with waves of cool blue and deep charcoal.</p>
+            <button class="swatch__cta" data-open-modal data-product="Blue Dunes Granite">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="panel" data-panel="quartz">
+      <div class="panel__intro">
+        <p class="panel__lede i18n" data-key="panel-quartz">Crystalline natural quartz &mdash; prized for translucence and weight.</p>
+        <span class="mono">Selected varieties</span>
+      </div>
+      <div class="swatch-grid">
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/quartz/quartz-crystallo-pink.jpg" alt="Crystallo Pink Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Quartz · 01</span>
+            <h3>Crystallo (Pink)</h3>
+            <p>Glassy clarity infused with soft, romantic rose-quartz blushing and delicate crystalline veins.</p>
+            <button class="swatch__cta" data-open-modal data-product="Crystallo Pink Quartz">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/quartz/quartz-patagonia.jpg" alt="Patagonia Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Quartz · 02</span>
+            <h3>Patagonia</h3>
+            <p>Geological drama. Translucent quartz chunks fused with golden-brown granite fragments and dramatic dark veining.</p>
+            <button class="swatch__cta" data-open-modal data-product="Patagonia Quartz">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="panel" data-panel="engineered">
+      <div class="panel__intro">
+        <p class="panel__lede i18n" data-key="panel-engineered">Engineered quartz &mdash; calibrated, repeatable, consistent across shipments.</p>
+        <span class="mono">Selected series</span>
+      </div>
+      <div class="swatch-grid">
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-calacatta.jpg" alt="Calacatta Series Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 01</span>
+            <h3>Calacatta Series</h3>
+            <p>Brilliant white base with dramatic, thick grey veining that mimics high-end Italian marble.</p>
+            <button class="swatch__cta" data-open-modal data-product="Calacatta Series">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-sparkle.jpg" alt="Sparkle Series Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 02</span>
+            <h3>Sparkle Series</h3>
+            <p>Modern grey canvas embedded with shimmering, reflective mica glints that catch the light beautifully.</p>
+            <button class="swatch__cta" data-open-modal data-product="Sparkle Series">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-calacatta-gold.png" alt="Calacatta Gold Series Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 03</span>
+            <h3>Calacatta Gold Series</h3>
+            <p>Pure frosty white surface detailed with striking, elegant golden and amber veining.</p>
+            <button class="swatch__cta" data-open-modal data-product="Calacatta Gold Series">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-antique-gold.png" alt="Antique Gold Series Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 04</span>
+            <h3>Antique Gold Series</h3>
+            <p>Luxurious bookmatched design with sophisticated golden-grey veins flowing in a mirrored pattern.</p>
+            <button class="swatch__cta" data-open-modal data-product="Antique Gold Series">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-venetian-gold.png" alt="Venetian Gold Series Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 05</span>
+            <h3>Venetian Gold Series</h3>
+            <p>Elegant creamy white surface traced by delicate, soft golden-beige mineral movements.</p>
+            <button class="swatch__cta" data-open-modal data-product="Venetian Gold Series">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-dazzle-grey.png" alt="Dazzle Grey Series Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 06</span>
+            <h3>Dazzle Grey Series</h3>
+            <p>Sophisticated cool grey base highlighted by elegant white marble veining and intricate crystalline patterns.</p>
+            <button class="swatch__cta" data-open-modal data-product="Dazzle Grey Series">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-liri-grey.png" alt="LIRI Grey Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 07</span>
+            <h3>LIRI Grey</h3>
+            <p>Subtle, ultra-modern warm white background detailed with thin grey diagonal hairline movement.</p>
+            <button class="swatch__cta" data-open-modal data-product="LIRI Grey">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-carrara-hilos.png" alt="Carrara Hilos Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 08</span>
+            <h3>Carrara Hilos</h3>
+            <p>Classic, timeless Carrara style white surface with soft, delicate grey clouding and fine spiderweb veining.</p>
+            <button class="swatch__cta" data-open-modal data-product="Carrara Hilos">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-black-sparkle.png" alt="Black Sparkle Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 09</span>
+            <h3>Black Sparkle</h3>
+            <p>Deep, mirror-like solid black canvas loaded with glittering, brilliant silver-white mineral flakes.</p>
+            <button class="swatch__cta" data-open-modal data-product="Black Sparkle">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-white-sparkle.png" alt="White Sparkle Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 10</span>
+            <h3>White Sparkle</h3>
+            <p>Pure frosty white field embedded with hundreds of fine, shimmering light-catching quartz crystal flakes.</p>
+            <button class="swatch__cta" data-open-modal data-product="White Sparkle">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-mapple-white.png" alt="Mapple White Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 11</span>
+            <h3>Mapple White</h3>
+            <p>Soft, organic off-white surface with extremely subtle, natural textured patterning.</p>
+            <button class="swatch__cta" data-open-modal data-product="Mapple White">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+        <article class="swatch">
+          <span class="swatch__chip"><img src="assets/images/engineered/engineered-pure-white.png" alt="Pure White Engineered Quartz" loading="lazy"/></span>
+          <div class="swatch__meta">
+            <span class="mono">Engineered · 12</span>
+            <h3>Pure White</h3>
+            <p>Absolute, solid bright white engineered quartz surface for a clean, modern, ultra-minimalist aesthetic.</p>
+            <button class="swatch__cta" data-open-modal data-product="Pure White">Enquire <span class="arr">→</span></button>
+          </div>
+        </article>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="range__note">
+    <span class="mono i18n" data-key="range-note">Looking for a stone not shown? Our catalogue is much larger.</span>
+    <button class="ghost-link" data-open-modal>Tell us what you need &rarr;</button>
+  </div>
+</section>
+
+<!-- ───── CAPABILITIES ───── -->
+<section class="caps" id="capabilities" data-screen-label="04 Capabilities">
+  <div class="section-head">
+    <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="caps-index">— 03 / Capabilities</span></span>
+    <h2 class="section-title i18n" data-key="caps-title">From the block <em>to</em><br/>the finished surface.</h2>
+    <p class="section-sub i18n" data-key="caps-sub">Click a shape or finish to see it.</p>
+  </div>
+
+  <div class="caps__viewer">
+    <div class="caps__lists">
+      <div class="caps__col">
+        <span class="mono caps__label i18n" data-key="caps-shapes">Shapes</span>
+        <ul class="caps__list">
+          <li class="caps-trigger is-active" data-img="cap-block"><span class="caps__num">01</span><span class="caps__name">Blocks</span><span class="caps__hint">View →</span></li>
+          <li class="caps-trigger" data-img="cap-slab"><span class="caps__num">02</span><span class="caps__name">Slabs</span><span class="caps__hint">View →</span></li>
+          <li class="caps-trigger" data-img="cap-thick"><span class="caps__num">03</span><span class="caps__name">Thick slabs</span><span class="caps__hint">View →</span></li>
+          <li class="caps-trigger" data-img="cap-cut"><span class="caps__num">04</span><span class="caps__name">Cut-to-size</span><span class="caps__hint">View →</span></li>
+        </ul>
+      </div>
+      <div class="caps__col">
+        <span class="mono caps__label i18n" data-key="caps-finishes">Finishes</span>
+        <ul class="caps__list">
+          <li class="caps-trigger" data-img="cap-polished"><span class="caps__num">01</span><span class="caps__name">Polished</span><span class="caps__hint">View →</span></li>
+          <li class="caps-trigger" data-img="cap-honed"><span class="caps__num">02</span><span class="caps__name">Honed</span><span class="caps__hint">View →</span></li>
+          <li class="caps-trigger" data-img="cap-shot"><span class="caps__num">03</span><span class="caps__name">Shot blast</span><span class="caps__hint">View →</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="caps__stage" id="capsStage">
+      <div class="caps__stage-img-wrap is-active" data-img-id="cap-block">
+        <img src="assets/images/capabilities/cap-block.png" alt="Blocks" />
+      </div>
+      <div class="caps__stage-img-wrap" data-img-id="cap-slab">
+        <img src="assets/images/capabilities/cap-slab.png" alt="Slabs" />
+      </div>
+      <div class="caps__stage-img-wrap" data-img-id="cap-thick">
+        <img src="assets/images/capabilities/cap-thick.png" alt="Thick Slabs" />
+      </div>
+      <div class="caps__stage-img-wrap" data-img-id="cap-cut">
+        <img src="assets/images/capabilities/cap-cut.png" alt="Cut-to-size" />
+      </div>
+      <div class="caps__stage-img-wrap" data-img-id="cap-polished">
+        <img src="assets/images/capabilities/cap-polished.png" alt="Polished finish" />
+      </div>
+      <div class="caps__stage-img-wrap" data-img-id="cap-honed">
+        <img src="assets/images/capabilities/cap-honed.png" alt="Honed finish" />
+      </div>
+      <div class="caps__stage-img-wrap" data-img-id="cap-shot">
+        <img src="assets/images/capabilities/cap-shot.png" alt="Shot blast finish" />
+      </div>
+      <div class="caps__stage-overlay">
+        <span class="name" id="capsLabel">Blocks</span>
+        <span class="desc" id="capsDesc">Raw, quarried, weight to order.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── BESPOKE (reordered) ───── -->
+<section class="bespoke" id="bespoke" data-screen-label="05 Bespoke">
+  <div class="section-head">
+    <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="bespoke-index">— 04 / Bespoke</span></span>
+    <h2 class="section-title i18n" data-key="bespoke-title">Beyond the slab.</h2>
+    <p class="section-sub i18n" data-key="bespoke-sub">Finished pieces, crafted to order. Click to see each.</p>
+  </div>
+
+  <div class="bespoke__viewer">
+    <ul class="bespoke__list">
+      <li class="bespoke__item bespoke-trigger is-active" data-img="b-sink">
+        <span class="bespoke__num mono">01</span>
+        <h3 class="bespoke__title">Marble Sinks</h3>
+        <span class="bespoke__hint">View →</span>
+        <p class="bespoke__desc">Vessel and under-mount, carved from single blocks.</p>
+      </li>
+      <li class="bespoke__item bespoke-trigger" data-img="b-tomb">
+        <span class="bespoke__num mono">02</span>
+        <h3 class="bespoke__title">Tomb Stones <span class="serif-italic">&amp;</span> Monuments</h3>
+        <span class="bespoke__hint">View →</span>
+        <p class="bespoke__desc">Custom shapes, engravings, classical and contemporary.</p>
+      </li>
+      <li class="bespoke__item bespoke-trigger" data-img="b-counter">
+        <span class="bespoke__num mono">03</span>
+        <h3 class="bespoke__title">Countertops</h3>
+        <span class="bespoke__hint">View →</span>
+        <p class="bespoke__desc">Kitchen and bar surfaces, edge-profiled to spec.</p>
+      </li>
+      <li class="bespoke__item bespoke-trigger" data-img="b-vanity">
+        <span class="bespoke__num mono">04</span>
+        <h3 class="bespoke__title">Vanity Tops</h3>
+        <span class="bespoke__hint">View →</span>
+        <p class="bespoke__desc">Bath and powder room, with integrated basins.</p>
+      </li>
+      <li class="bespoke__item bespoke-trigger" data-img="b-tub">
+        <span class="bespoke__num mono">05</span>
+        <h3 class="bespoke__title">Marble Bathtubs</h3>
+        <span class="bespoke__hint">View →</span>
+        <p class="bespoke__desc">Sculpted forms, hand-finished, weight on request.</p>
+      </li>
+    </ul>
+
+    <div class="bespoke__stage" id="bespokeStage">
+      <div class="bespoke__stage-img-wrap is-active" data-img-id="b-sink"><svg viewBox="0 0 600 750" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <rect width="100%" height="100%" fill="#1F1F1F"/>
+    
+    <defs><linearGradient id="sinkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient></defs>
+    <g transform="translate(150,250)">
+      <rect x="-100" y="180" width="500" height="60" fill="#E8E0CC" opacity=".15"/>
+      <ellipse cx="150" cy="200" rx="180" ry="30" fill="#000" opacity=".4"/>
+      <ellipse cx="150" cy="170" rx="170" ry="50" fill="#F1EDE3"/>
+      <ellipse cx="150" cy="170" rx="170" ry="50" fill="url(#sinkGrad)" opacity=".4"/>
+      <ellipse cx="150" cy="155" rx="155" ry="42" fill="#1F1F1F"/>
+      <ellipse cx="150" cy="150" rx="150" ry="38" fill="#2A2826"/>
+      <ellipse cx="150" cy="150" rx="140" ry="32" fill="#3A3835"/>
+      <ellipse cx="100" cy="138" rx="40" ry="6" fill="#fff" opacity=".15"/>
+      <path d="M0,170 Q50,165 100,170 Q150,178 200,168 Q250,162 300,172" stroke="#A39C90" stroke-width="0.8" fill="none" opacity=".5"/>
+      <g transform="translate(150,40)">
+        <rect x="-2" y="0" width="4" height="60" fill="#1A1A1A"/>
+        <rect x="-3" y="55" width="22" height="6" fill="#1A1A1A"/>
+        <rect x="14" y="55" width="3" height="40" fill="#1A1A1A"/>
+        <circle cx="15" cy="100" r="3" fill="#F2A310"/>
+      </g>
+    </g>
+    <text x="300" y="700" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="18" fill="#fff" opacity=".55">Carved from a single block</text>
+  
+  </svg></div>
+      <div class="bespoke__stage-img-wrap" data-img-id="b-tomb"><svg viewBox="0 0 600 750" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <rect width="100%" height="100%" fill="#1F1F1F"/>
+    
+    <defs><linearGradient id="tombGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#000" stop-opacity=".2"/>
+    </linearGradient></defs>
+    <g transform="translate(180,200)">
+      <rect x="0" y="380" width="240" height="20" fill="#1A1A1A"/>
+      <rect x="20" y="360" width="200" height="20" fill="#2A2826"/>
+      <path d="M40,360 L40,80 Q40,20 120,20 Q200,20 200,80 L200,360 Z" fill="#F1EDE3"/>
+      <path d="M40,360 L40,80 Q40,20 120,20 Q200,20 200,80 L200,360 Z" fill="url(#tombGrad)" opacity=".3"/>
+      <path d="M40,180 Q120,160 200,200" stroke="#A39C90" stroke-width="0.8" fill="none" opacity=".4"/>
+      <path d="M40,260 Q120,250 200,280" stroke="#A39C90" stroke-width="0.6" fill="none" opacity=".3"/>
+      <circle cx="120" cy="110" r="22" fill="none" stroke="#F2A310" stroke-width="1.5" opacity=".8"/>
+      <circle cx="120" cy="110" r="6" fill="#F2A310" opacity=".7"/>
+      <line x1="60" y1="170" x2="180" y2="170" stroke="#3A3835" stroke-width="0.6" opacity=".4"/>
+      <line x1="70" y1="190" x2="170" y2="190" stroke="#3A3835" stroke-width="0.5" opacity=".3"/>
+      <line x1="80" y1="215" x2="160" y2="215" stroke="#3A3835" stroke-width="0.5" opacity=".3"/>
+    </g>
+    <text x="300" y="700" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="18" fill="#fff" opacity=".55">Custom shapes · engravings · classical and contemporary</text>
+  
+  </svg></div>
+      <div class="bespoke__stage-img-wrap" data-img-id="b-counter"><svg viewBox="0 0 600 750" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <rect width="100%" height="100%" fill="#1F1F1F"/>
+    
+    <defs><linearGradient id="counterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#000" stop-opacity=".1"/>
+    </linearGradient></defs>
+    <g transform="translate(60,250)">
+      <rect x="0" y="0" width="480" height="180" fill="#1A1A1A"/>
+      <rect x="0" y="180" width="480" height="34" fill="#F1EDE3"/>
+      <rect x="0" y="180" width="480" height="34" fill="url(#counterGrad)" opacity=".4"/>
+      <rect x="0" y="214" width="480" height="6" fill="#2A2826"/>
+      <path d="M0,196 Q100,192 200,197 Q300,201 400,194 Q450,192 480,196" stroke="#A39C90" stroke-width="0.7" fill="none" opacity=".5"/>
+      <path d="M0,205 Q150,201 300,206 Q400,209 480,204" stroke="#A39C90" stroke-width="0.5" fill="none" opacity=".35"/>
+      <rect x="0" y="220" width="480" height="200" fill="#252320"/>
+      <line x1="160" y1="220" x2="160" y2="420" stroke="#1A1A1A" stroke-width="1"/>
+      <line x1="320" y1="220" x2="320" y2="420" stroke="#1A1A1A" stroke-width="1"/>
+      <circle cx="80" cy="320" r="2" fill="#F2A310"/>
+      <circle cx="240" cy="320" r="2" fill="#F2A310"/>
+      <circle cx="400" cy="320" r="2" fill="#F2A310"/>
+      <line x1="240" y1="0" x2="240" y2="60" stroke="#fff" stroke-width="0.5" opacity=".3"/>
+      <circle cx="240" cy="65" r="6" fill="#F2A310" opacity=".7"/>
+    </g>
+    <text x="300" y="700" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="18" fill="#fff" opacity=".55">Kitchen and bar surfaces · edge-profiled to spec</text>
+  
+  </svg></div>
+      <div class="bespoke__stage-img-wrap" data-img-id="b-vanity"><svg viewBox="0 0 600 750" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <rect width="100%" height="100%" fill="#1F1F1F"/>
+    
+    <defs><linearGradient id="vanityGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#000" stop-opacity=".1"/>
+    </linearGradient></defs>
+    <g transform="translate(80,200)">
+      <rect x="120" y="0" width="200" height="180" fill="#0E0E0E" stroke="#A39C90" stroke-width="1"/>
+      <rect x="124" y="4" width="192" height="172" fill="#3A3835"/>
+      <line x1="140" y1="20" x2="160" y2="80" stroke="#fff" stroke-width="0.5" opacity=".3"/>
+      <circle cx="60" cy="60" r="6" fill="#F2A310" opacity=".7"/>
+      <circle cx="380" cy="60" r="6" fill="#F2A310" opacity=".7"/>
+      <line x1="60" y1="0" x2="60" y2="54" stroke="#fff" stroke-width="0.4" opacity=".3"/>
+      <line x1="380" y1="0" x2="380" y2="54" stroke="#fff" stroke-width="0.4" opacity=".3"/>
+      <rect x="0" y="200" width="440" height="22" fill="#F1EDE3"/>
+      <rect x="0" y="200" width="440" height="22" fill="url(#vanityGrad)" opacity=".3"/>
+      <rect x="0" y="222" width="440" height="5" fill="#2A2826"/>
+      <ellipse cx="220" cy="212" rx="80" ry="9" fill="#1F1F1F"/>
+      <rect x="218" y="180" width="4" height="22" fill="#1A1A1A"/>
+      <rect x="217" y="198" width="14" height="4" fill="#1A1A1A"/>
+      <path d="M0,212 Q100,209 220,212 Q340,215 440,210" stroke="#A39C90" stroke-width="0.6" fill="none" opacity=".5"/>
+      <rect x="0" y="227" width="440" height="200" fill="#252320"/>
+      <line x1="220" y1="227" x2="220" y2="427" stroke="#1A1A1A" stroke-width="1"/>
+      <circle cx="120" cy="330" r="2" fill="#F2A310"/>
+      <circle cx="320" cy="330" r="2" fill="#F2A310"/>
+    </g>
+    <text x="300" y="700" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="18" fill="#fff" opacity=".55">Bath and powder room · with integrated basins</text>
+  
+  </svg></div>
+      <div class="bespoke__stage-img-wrap" data-img-id="b-tub"><svg viewBox="0 0 600 750" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <rect width="100%" height="100%" fill="#1F1F1F"/>
+    
+    <defs><linearGradient id="tubGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#000" stop-opacity=".2"/>
+    </linearGradient></defs>
+    <g transform="translate(100,250)">
+      <ellipse cx="200" cy="320" rx="200" ry="14" fill="#000" opacity=".5"/>
+      <rect x="20" y="290" width="360" height="20" fill="#1A1A1A"/>
+      <path d="M0,140 Q0,90 50,90 L350,90 Q400,90 400,140 L380,290 L20,290 Z" fill="#F1EDE3"/>
+      <path d="M0,140 Q0,90 50,90 L350,90 Q400,90 400,140 L380,290 L20,290 Z" fill="url(#tubGrad)" opacity=".35"/>
+      <path d="M30,150 Q30,110 70,110 L330,110 Q370,110 370,150 L355,265 L45,265 Z" fill="#3A3835"/>
+      <ellipse cx="200" cy="155" rx="160" ry="14" fill="#5A584F" opacity=".8"/>
+      <ellipse cx="160" cy="150" rx="40" ry="3" fill="#fff" opacity=".15"/>
+      <path d="M0,200 Q100,196 200,202 Q300,206 400,198" stroke="#A39C90" stroke-width="0.7" fill="none" opacity=".4"/>
+      <path d="M30,250 Q150,246 300,252" stroke="#A39C90" stroke-width="0.5" fill="none" opacity=".3"/>
+      <g transform="translate(180,40)">
+        <path d="M20,0 Q20,30 40,40 L46,50" stroke="#1A1A1A" stroke-width="3" fill="none"/>
+        <circle cx="48" cy="55" r="2.5" fill="#F2A310"/>
+      </g>
+    </g>
+    <text x="300" y="700" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="18" fill="#fff" opacity=".55">Sculpted forms · hand-finished · weight on request</text>
+  
+  </svg></div>
+      <div class="bespoke__stage-overlay">
+        <span class="name" id="bespokeLabel">Marble Sinks</span>
+        <span class="mono" id="bespokeRef">Bespoke · 01</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── CERTIFICATIONS ───── -->
+<section class="certs" data-screen-label="07 Certifications">
+  <div class="certs__strip">
+    <div class="certs__label">
+      <span class="mono i18n" data-key="certs-index">— 06 / Credentials</span>
+      <h3 class="i18n" data-key="certs-title">Certified, compliant,<br/>ready to export.</h3>
+    </div>
+    <div class="certs__items">
+      <div class="cert">
+        <div class="cert__logo"><img src="assets/images/certifications/cert-makeinindia.png" alt="Make in India" onerror="this.parentElement.classList.add('is-placeholder'); this.remove();"/><span class="cert__placeholder">MII</span></div>
+        <span class="cert__name">Make in India</span>
+        <span class="cert__sub">Govt. of India</span>
+      </div>
+      <div class="cert">
+        <div class="cert__logo"><img src="assets/images/certifications/cert-commerce.png" alt="Ministry of Commerce" onerror="this.parentElement.classList.add('is-placeholder'); this.remove();"/><span class="cert__placeholder">MoC</span></div>
+        <span class="cert__name">Ministry of Commerce</span>
+        <span class="cert__sub">Govt. of India</span>
+      </div>
+      <div class="cert">
+        <div class="cert__logo"><img src="assets/images/certifications/cert-fieo.png" alt="FIEO" onerror="this.parentElement.classList.add('is-placeholder'); this.remove();"/><span class="cert__placeholder">FIEO</span></div>
+        <span class="cert__name">FIEO</span>
+        <span class="cert__sub">Federation of Indian Export Organisations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── AI STONE ADVISOR ───── -->
+<section class="advisor" id="advisor" data-screen-label="08 Stone Advisor">
+  <div class="advisor__inner">
+    <div class="advisor__head">
+      <span class="advisor__badge"><span class="sun-glyph" aria-hidden="true"></span><span class="mono">AI · Stone Advisor</span></span>
+      <h2 class="i18n" data-key="advisor-title">Not sure which stone? <em>Ask.</em></h2>
+      <p class="i18n" data-key="advisor-sub">Tell us about your project and our advisor will suggest a stone from the catalogue with its trade-offs. Indoor or outdoor, modern or classical &mdash; we will recommend what we would specify ourselves.</p>
+    </div>
+
+    <form class="advisor__panel" id="advisorForm">
+      <div class="advisor__row">
+        <div class="field">
+          <label for="adv-use">Use case</label>
+          <select id="adv-use" name="use" required>
+            <option value="" disabled selected>Where will the stone go?</option>
+            <option>Flooring — interior</option>
+            <option>Flooring — exterior / pavement</option>
+            <option>Wall cladding — interior</option>
+            <option>Wall cladding — exterior / façade</option>
+            <option>Kitchen countertop</option>
+            <option>Bathroom vanity / wall</option>
+            <option>Staircase / steps</option>
+            <option>Monument / memorial</option>
+            <option>Hospitality lobby / reception</option>
+            <option>Other / not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="adv-setting">Setting</label>
+          <select id="adv-setting" name="setting" required>
+            <option value="" disabled selected>Indoor or outdoor?</option>
+            <option>Indoor</option>
+            <option>Outdoor</option>
+            <option>Both</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Style direction</label>
+        <div class="chips" id="advStyleChips">
+          <button type="button" class="chip" data-style="Modern minimal">Modern minimal</button>
+          <button type="button" class="chip" data-style="Classical warm">Classical warm</button>
+          <button type="button" class="chip" data-style="Earthy / muted">Earthy / muted</button>
+          <button type="button" class="chip" data-style="Cool / contemporary">Cool / contemporary</button>
+          <button type="button" class="chip" data-style="High polish">High polish</button>
+          <button type="button" class="chip" data-style="Heritage / traditional">Heritage</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="adv-notes">Anything else? <span style="text-transform:none; letter-spacing:0; color:var(--mute);">(optional)</span></label>
+        <textarea id="adv-notes" name="notes" placeholder="Climate, traffic, budget guidance, colour preferences, project size…"></textarea>
+      </div>
+
+      <button type="submit" class="advisor__submit" id="advSubmit">
+        <span>Recommend a stone</span><span class="arr">→</span>
+      </button>
+      <div class="advisor__loader" id="advLoader">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span>Thinking through the catalogue…</span>
+      </div>
+      <div class="advisor__result" id="advResult"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ───── CONTACT ───── -->
+<section class="contact" id="contact" data-screen-label="09 Contact">
+  <div class="contact__inner">
+    <div class="section-head" style="margin-bottom: clamp(24px,4vw,40px);">
+      <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="contact-index">— 07 / Contact</span></span>
+      <h2 class="section-title i18n" data-key="contact-title">Tell us about<br/>your <em>project.</em></h2>
+      <p class="contact__lede i18n" data-key="contact-lede">Send a brief &mdash; product, dimensions, finish, a reference image &mdash; and we will come back with options, samples and a quote.</p>
+    </div>
+
+    <div class="contact__grid">
+      <div>
+        <button class="contact__cta" data-open-modal>
+          <span class="i18n" data-key="contact-cta">Start an enquiry</span>
+          <span class="arr">→</span>
+        </button>
+        <p class="mono" style="margin-top:18px;">Sent directly to our inbox.</p>
+      </div>
+
+      <div class="contact__info">
+        <div class="contact__block" style="padding-top:0;">
+          <span class="mono">Write to us</span>
+          <a class="contact__link" href="mailto:contact@sunrisenaturalstones.com">contact@sunrisenaturalstones.com</a>
+          <a class="contact__link contact__link--sub" href="mailto:deepak@sunrisenaturalstones.com">deepak@sunrisenaturalstones.com</a>
+          <a class="contact__link contact__link--sub" href="mailto:jeetu@sunrisenaturalstones.com">jeetu@sunrisenaturalstones.com</a>
+        </div>
+
+        <div class="contact__block">
+          <span class="mono">Call or WhatsApp</span>
+          <a class="contact__link" href="tel:+917014568709">+91 70145 68709</a>
+          <a class="contact__link contact__link--sub" href="tel:+919414159052">+91 94141 59052</a>
+        </div>
+
+        <div class="contact__block">
+          <span class="mono">Visit / follow</span>
+          <p class="contact__link" style="font-style:italic;">Udaipur, Rajasthan, India</p>
+          <a class="contact__link contact__link--sub" href="https://www.instagram.com/the_sunrise_store" target="_blank" rel="noopener">@the_sunrise_store on Instagram &nearr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── ENQUIRY MODAL ───── -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+  <div class="modal__card">
+    <div class="modal__top">
+      <div>
+        <h3 class="modal__title" id="modalTitle">Start an enquiry</h3>
+        <p class="modal__sub">Sends to contact@sunrisenaturalstones.com</p>
+      </div>
+      <button class="modal__close" id="modalClose" aria-label="Close enquiry">×</button>
+    </div>
+    <div class="modal__body">
+      <form class="form" id="enquiryForm">
+        <div class="form__row">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required placeholder="Your full name"/></div>
+          <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" required placeholder="+1 555 123 4567"/></div>
+        </div>
+        <div class="form__row">
+          <div class="field"><label for="f-country">Country</label><input id="f-country" name="country" type="text" required placeholder="Country"/></div>
+          <div class="field"><label for="f-city">City</label><input id="f-city" name="city" type="text" required placeholder="City"/></div>
+        </div>
+        <div class="field"><label for="f-email">Email <span style="text-transform:none; letter-spacing:0; color:var(--mute);">(optional)</span></label><input id="f-email" name="email" type="email" placeholder="you@example.com"/></div>
+        <div class="field">
+          <label for="f-product">Product</label>
+          <select id="f-product" name="product" required>
+            <option value="" disabled selected>Select a product</option>
+            <optgroup label="Marble">
+              <option>Nirzerna Marble</option><option>Aagaria Marble</option><option>Indian Onyx Marble</option>
+              <option>Green Marble</option><option>Panda White Marble</option>
+            </optgroup>
+            <optgroup label="Sandstone">
+              <option>White Sandstone</option><option>Beige Sandstone</option><option>Red Sandstone</option><option>Pink Sandstone</option><option>Woodland Sandstone</option><option>Pencil Line Grey Sandstone</option>
+            </optgroup>
+            <optgroup label="Granite">
+              <option>Black Granite</option><option>P White Granite</option>
+              <option>Alaska Azul Granite</option><option>Alaska White Granite</option><option>Alaska Gold Granite</option><option>Blue Dunes Granite</option>
+            </optgroup>
+            <optgroup label="Quartz">
+              <option>Crystallo (Pink) Quartz</option><option>Patagonia Quartz</option>
+            </optgroup>
+            <optgroup label="Engineered Quartz">
+              <option>Calacatta Series</option><option>Sparkle Series</option><option>Calacatta Gold Series</option><option>Antique Gold Series</option><option>Venetian Gold Series</option><option>Dazzle Grey Series</option><option>LIRI Grey</option><option>Carrara Hilos</option><option>Black Sparkle</option><option>White Sparkle</option><option>Mapple White</option><option>Pure White</option>
+            </optgroup>
+            <optgroup label="Bespoke">
+              <option>Marble Sinks</option><option>Tomb Stones &amp; Monuments</option>
+              <option>Countertops</option><option>Vanity Tops</option><option>Marble Bathtubs</option>
+            </optgroup>
+            <option>Other / Not sure</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-message">Your enquiry</label><textarea id="f-message" name="message" required placeholder="Quantity, dimensions, finish, project timeline, anything else we should know."></textarea></div>
+        <button type="submit" class="form__submit">Send enquiry <span class="arr">→</span></button>
+        <p class="form__hint">Or write directly to <a href="mailto:contact@sunrisenaturalstones.com">contact@sunrisenaturalstones.com</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ───── Language overlay ───── -->
+<div class="lang-overlay" id="langOverlay" aria-hidden="true">
+  <div class="spinner"><div></div><div></div><div></div></div>
+  <span class="label" id="langOverlayLabel">Translating…</span>
+</div>
+
+<!-- ───── REVIEWS ───── -->
+<section class="reviews" id="reviews" data-screen-label="06 Reviews">
+  <div class="reviews__head">
+    <div class="reviews__head-l">
+      <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="reviews-index">— 05 / Customer satisfaction</span></span>
+      <h2 class="section-title i18n" data-key="reviews-title">From clients,<br/><em>in their words.</em></h2>
+    </div>
+    <div class="reviews__rating">
+      <span class="stars">★★★★<span style="opacity:.4;">★</span></span>
+      <span class="num">4.8</span>
+      <span class="sub i18n" data-key="reviews-meta">From repeat buyers worldwide</span>
+    </div>
+  </div>
+
+  <div class="reviews__grid">
+    <article class="review reveal">
+      <span class="review__stars">★★★★★</span>
+      <p class="review__quote">Three containers of Calacatta, matched vein-to-vein for a hotel lobby. Most suppliers would have shrugged at that brief.</p>
+      <div class="review__meta"><span class="review__name">Kelly A.</span><span class="review__loc">New York · USA</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★<span style="opacity:.4;">★</span></span>
+      <p class="review__quote">Beige sandstone for a villa façade in the Gulf climate. Two years on, still looks the day it was crated. Shipping took a week longer than promised.</p>
+      <div class="review__meta"><span class="review__name">Mohammed A.</span><span class="review__loc">Dubai · UAE</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★★</span>
+      <p class="review__quote">Honest people, honest stone. Makrana and Statuario for three projects so far &mdash; quality has only gone up.</p>
+      <div class="review__meta"><span class="review__name">Elena R.</span><span class="review__loc">Milan · Italy</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★<span style="opacity:.4;">★</span></span>
+      <p class="review__quote">A cut-to-size order for a commercial fit-out, delivered ahead of schedule. Packing was exceptional. Would have liked more finish samples up front.</p>
+      <div class="review__meta"><span class="review__name">James W.</span><span class="review__loc">London · UK</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★★</span>
+      <p class="review__quote">Onyx behind a reception desk in Lagos. Guests stop to photograph it. That speaks for itself.</p>
+      <div class="review__meta"><span class="review__name">Aisha O.</span><span class="review__loc">Lagos · Nigeria</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★<span style="opacity:.4;">★</span></span>
+      <p class="review__quote">Precise dimensions, beautiful finish. A first impression of Indian craftsmanship for a Japanese client &mdash; and a very good one.</p>
+      <div class="review__meta"><span class="review__name">Hiroshi T.</span><span class="review__loc">Tokyo · Japan</span></div>
+    </article>
+  </div>
+</section>
+
+
+
+<!-- ───── FOOTER ───── -->
+<footer class="foot">
+  <div class="foot__grid">
+    <div class="foot__brand">
+      <span class="foot__logo"><img src="logo.png" alt="Sunrise Natural Stones logo"/></span>
+      <div class="foot__brand-text">
+        <span class="name">Sunrise Natural Stones</span>
+        <span class="role">Marble · Granite · Quartz · Sandstone</span>
+        <div class="foot__socials">
+          <a href="https://www.instagram.com/the_sunrise_store" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/917014568709" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l1.5-5A8.5 8.5 0 1 1 8 19.5L3 21z"/><path d="M8.5 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1.5-1 .5c-.8 0-2-1.2-2-2l.5-1-1.5-2L8.5 9.5z" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="mailto:contact@sunrisenaturalstones.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot__col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@sunrisenaturalstones.com">contact@sunrisenaturalstones.com</a></li>
+        <li><a href="mailto:deepak@sunrisenaturalstones.com">deepak@sunrisenaturalstones.com</a></li>
+        <li><a href="mailto:jeetu@sunrisenaturalstones.com">jeetu@sunrisenaturalstones.com</a></li>
+        <li><a href="tel:+917014568709">+91 70145 68709</a></li>
+        <li><a href="tel:+919414159052">+91 94141 59052</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#range">Range</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#bespoke">Bespoke</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#advisor">Stone Advisor</a></li>
+        <li><button class="ghost-link" data-open-modal style="color:var(--soft);">Start an enquiry &rarr;</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot__wordmark" aria-hidden="true">Sunrise Natural Stones</div>
+  <div class="foot__row">
+    <span class="mono">© 2026 Sunrise Natural Stones</span>
+    <span class="mono">Udaipur · Rajasthan · India</span>
+  </div>
+</footer>
+
+<script>
+// ───── Nav scroll
+const navEl = document.getElementById('nav');
+const onScroll = () => navEl.classList.toggle('is-scrolled', window.scrollY > 30);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ───── Mobile menu
+const burger = document.getElementById('burger');
+const menuEl = document.getElementById('menu');
+const menuClose = document.getElementById('menuClose');
+const openMenu = () => { menuEl.classList.add('is-open'); menuEl.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
+const closeMenu = () => { menuEl.classList.remove('is-open'); menuEl.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
+burger?.addEventListener('click', openMenu);
+menuClose?.addEventListener('click', closeMenu);
+document.querySelectorAll('[data-close-menu]').forEach(el => el.addEventListener('click', closeMenu));
+
+// ───── Range tabs
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const key = tab.dataset.tab;
+    tabs.forEach(t => {
+      const active = t === tab;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === key));
+  });
+});
+
+// ───── Capabilities interactive viewer
+const capDescriptions = {
+  'cap-block': { label: 'Blocks', desc: 'Raw, quarried, weight to order.' },
+  'cap-slab': { label: 'Slabs', desc: 'Standard thickness, gang-sawn.' },
+  'cap-thick': { label: 'Thick slabs', desc: 'For monumental and structural use.' },
+  'cap-cut': { label: 'Cut-to-size', desc: 'CNC-cut to your spec, ready to install.' },
+  'cap-polished': { label: 'Polished', desc: 'Mirror reflection, deepens colour.' },
+  'cap-honed': { label: 'Honed', desc: 'Matte, soft, low-glare.' },
+  'cap-shot': { label: 'Shot blast', desc: 'Textured, slip-resistant, exterior.' }
+};
+const capTriggers = document.querySelectorAll('.caps-trigger');
+const capWraps = document.querySelectorAll('.caps__stage-img-wrap');
+const capLabel = document.getElementById('capsLabel');
+const capDesc = document.getElementById('capsDesc');
+function setCap(key){
+  capTriggers.forEach(t => t.classList.toggle('is-active', t.dataset.img === key));
+  capWraps.forEach(i => i.classList.toggle('is-active', i.dataset.imgId === key));
+  const d = capDescriptions[key];
+  if (d){ capLabel.textContent = d.label; capDesc.textContent = d.desc; }
+}
+capTriggers.forEach(t => {
+  t.addEventListener('click', () => setCap(t.dataset.img));
+  t.addEventListener('mouseenter', () => setCap(t.dataset.img));
+});
+
+// ───── Bespoke interactive viewer
+const bespokeLabels = {
+  'b-sink':    { label: 'Marble Sinks', ref: 'Bespoke · 01' },
+  'b-tomb':    { label: 'Tomb Stones & Monuments', ref: 'Bespoke · 02' },
+  'b-counter': { label: 'Countertops', ref: 'Bespoke · 03' },
+  'b-vanity':  { label: 'Vanity Tops', ref: 'Bespoke · 04' },
+  'b-tub':     { label: 'Marble Bathtubs', ref: 'Bespoke · 05' }
+};
+const bTriggers = document.querySelectorAll('.bespoke-trigger');
+const bWraps = document.querySelectorAll('.bespoke__stage-img-wrap');
+const bLabel = document.getElementById('bespokeLabel');
+const bRef = document.getElementById('bespokeRef');
+function setBespoke(key){
+  bTriggers.forEach(t => t.classList.toggle('is-active', t.dataset.img === key));
+  bWraps.forEach(i => i.classList.toggle('is-active', i.dataset.imgId === key));
+  const d = bespokeLabels[key];
+  if (d){ bLabel.textContent = d.label; bRef.textContent = d.ref; }
+}
+bTriggers.forEach(t => {
+  t.addEventListener('click', () => setBespoke(t.dataset.img));
+  t.addEventListener('mouseenter', () => setBespoke(t.dataset.img));
+});
+
+// ───── Modal
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+const productSelect = document.getElementById('f-product');
+const openModal = (product) => {
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  if (product){
+    const opt = [...productSelect.options].find(o => o.value === product || o.textContent === product);
+    if (opt) productSelect.value = opt.value || opt.textContent;
+  }
+  setTimeout(() => document.getElementById('f-name')?.focus(), 250);
+};
+const closeModal = () => {
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+};
+document.querySelectorAll('[data-open-modal]').forEach(b => {
+  b.addEventListener('click', (e) => {
+    e.preventDefault();
+    const product = b.getAttribute('data-product');
+    openModal(product);
+  });
+});
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape'){ closeModal(); closeLang(); } });
+
+// ───── Submit enquiry → mailto
+document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = new FormData(e.target);
+  const subject = `New enquiry — ${data.get('product')} — ${data.get('name')}`;
+  const body = `Hello Sunrise Natural Stones,
+
+I'd like to enquire about: ${data.get('product')}
+
+— My details —
+Name:    ${data.get('name')}
+Phone:   ${data.get('phone')}
+Email:   ${data.get('email') || '—'}
+Country: ${data.get('country')}
+City:    ${data.get('city')}
+
+— My enquiry —
+${data.get('message')}
+
+Thank you.`;
+  window.location.href = `mailto:contact@sunrisenaturalstones.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+// ───── Hero slideshow loop (Video -> Photo 2 -> Photo 3)
+const slides = document.querySelectorAll('.hero__slide');
+const heroVideo = document.getElementById('heroVideo');
+let slideIdx = 0;
+let slideTimeout = null;
+
+function goSlide(i) {
+  if (slideTimeout) clearTimeout(slideTimeout);
+  
+  slideIdx = (i + slides.length) % slides.length;
+  slides.forEach((s, k) => s.classList.toggle('is-active', k === slideIdx));
+  
+  if (slideIdx === 0) {
+    if (heroVideo) {
+      heroVideo.currentTime = 0;
+      heroVideo.play().catch(e => console.warn('video play blocked', e));
+    }
+  } else {
+    slideTimeout = setTimeout(() => {
+      goSlide(slideIdx + 1);
+    }, 5000);
+  }
+}
+
+if (heroVideo) {
+  heroVideo.addEventListener('ended', () => {
+    goSlide(1);
+  });
+  heroVideo.addEventListener('error', () => {
+    slideTimeout = setTimeout(() => goSlide(1), 5000);
+  });
+}
+
+// ───── About slideshow loop
+const aboutSlides = document.querySelectorAll('.about__slide');
+const aboutCaption = document.getElementById('aboutImageCaption');
+let aboutSlideIdx = 0;
+const aboutCaptions = [
+  'Verde Guatemala Marble',
+  'Indian Onyx Marble',
+  'Indian Black Granite',
+  'Woodland Sandstone',
+  'Pencil Line Grey Sandstone',
+  'Nizarna White Marble',
+  'Alaska Gold Granite',
+  'Patagonia Quartz'
+];
+
+function nextAboutSlide() {
+  aboutSlideIdx = (aboutSlideIdx + 1) % aboutSlides.length;
+  aboutSlides.forEach((s, k) => s.classList.toggle('is-active', k === aboutSlideIdx));
+  if (aboutCaption && aboutCaptions[aboutSlideIdx]) {
+    aboutCaption.textContent = aboutCaptions[aboutSlideIdx];
+  }
+}
+if (aboutSlides.length > 0) {
+  setInterval(nextAboutSlide, 4000);
+}
+
+// ───── Video autoplay fix
+(function fixAutoplay() {
+  const vid = document.getElementById('heroVideo');
+  if (!vid) return;
+  function tryPlay() {
+    vid.play().catch(function() {
+      // Retry on user interaction
+      document.addEventListener('click', function once() {
+        vid.play().catch(function(){});
+        document.removeEventListener('click', once);
+      });
+      document.addEventListener('scroll', function once() {
+        vid.play().catch(function(){});
+        document.removeEventListener('scroll', once);
+      });
+    });
+  }
+  if (vid.readyState >= 2) {
+    tryPlay();
+  } else {
+    vid.addEventListener('loadeddata', tryPlay);
+  }
+  // Also try on visibility change (returning to tab)
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden && vid.paused && vid.currentTime === 0) {
+      vid.play().catch(function(){});
+    }
+  });
+})();
+
+// ───── Language picker
+const langBtn = document.getElementById('langBtn');
+const langPicker = document.getElementById('langPicker');
+const langMenu = document.getElementById('langMenu');
+const langLabel = document.getElementById('langLabel');
+const langOverlay = document.getElementById('langOverlay');
+const langOverlayLabel = document.getElementById('langOverlayLabel');
+
+const langNames = { en:'English', hi:'हिन्दी (Hindi)', ar:'العربية (Arabic)', zh:'中文 (Mandarin Chinese)', ja:'日本語 (Japanese)', ko:'한국어 (Korean)', de:'Deutsch (German)', fr:'Français (French)', it:'Italiano (Italian)', es:'Español (Spanish)', pt:'Português (Portuguese)', ru:'Русский (Russian)', nl:'Nederlands (Dutch)', pl:'Polski (Polish)' };
+const langCodes = { en:'EN', hi:'HI', ar:'AR', zh:'ZH', ja:'JA', ko:'KO', de:'DE', fr:'FR', it:'IT', es:'ES', pt:'PT', ru:'RU', nl:'NL', pl:'PL' };
+
+const closeLang = () => { langPicker.classList.remove('is-open'); langBtn.setAttribute('aria-expanded','false'); };
+const toggleLang = () => {
+  const open = langPicker.classList.toggle('is-open');
+  langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+};
+langBtn?.addEventListener('click', (e) => { e.stopPropagation(); toggleLang(); });
+document.addEventListener('click', (e) => { if (!langPicker.contains(e.target)) closeLang(); });
+
+// Cache original English text
+const originalText = new Map();
+document.querySelectorAll('.i18n').forEach(el => originalText.set(el, el.innerHTML));
+
+async function translatePage(lang){
+  if (lang === 'en'){
+    document.querySelectorAll('.i18n').forEach(el => {
+      const o = originalText.get(el);
+      if (o !== undefined) el.innerHTML = o;
+    });
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
+    return;
+  }
+  langOverlay.classList.add('is-shown');
+  langOverlayLabel.textContent = `Translating to ${langNames[lang]}…`;
+  try {
+    const els = [...document.querySelectorAll('.i18n')];
+    // Use ORIGINAL english as source to avoid translating already-translated text
+    const items = els.map((el, i) => ({ i, text: (originalText.get(el) || el.innerHTML).replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim() })).filter(x => x.text);
+
+    // Chunk to avoid 1024-token output cap
+    const chunkSize = 12;
+    const out = new Array(els.length).fill(null);
+    for (let c = 0; c < items.length; c += chunkSize){
+      const chunk = items.slice(c, c + chunkSize);
+      const prompt = `Translate these English UI strings for a natural-stone exporter's website into ${langNames[lang]}. Keep each translation concise, professional, trade-appropriate. Preserve any names like "Sunrise", "Udaipur", "Carrara", "Makrana", "Statuario", "Calacatta". Return ONLY a JSON array of strings, same order and length as the input. No markdown, no code fences, no commentary.\n\nInput (${chunk.length} strings):\n${JSON.stringify(chunk.map(x => x.text))}`;
+      const reply = await window.claude.complete(prompt);
+      let arr = null;
+      try {
+        const start = reply.indexOf('[');
+        const end = reply.lastIndexOf(']');
+        if (start >= 0 && end > start){
+          arr = JSON.parse(reply.slice(start, end + 1));
+        }
+      } catch(e) { console.warn('chunk parse failed', e, reply); }
+      if (Array.isArray(arr)){
+        chunk.forEach((item, k) => {
+          if (typeof arr[k] === 'string') out[item.i] = arr[k];
+        });
+      }
+    }
+    els.forEach((el, i) => {
+      const orig = originalText.get(el);
+      if (typeof out[i] === 'string' && out[i].length){
+        // Preserve <strong>/<em>/<br/> from original if simple
+        el.textContent = out[i];
+      } else if (orig !== undefined){
+        el.innerHTML = orig;
+      }
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+  } catch(err){
+    console.warn('Translation failed:', err);
+  } finally {
+    langOverlay.classList.remove('is-shown');
+  }
+}
+
+document.querySelectorAll('#langMenu button').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const lang = btn.dataset.lang;
+    document.querySelectorAll('#langMenu button').forEach(b => b.classList.toggle('is-active', b === btn));
+    langLabel.textContent = langCodes[lang];
+    closeLang();
+    await translatePage(lang);
+  });
+});
+
+// ───── AI Stone Advisor
+const advForm = document.getElementById('advisorForm');
+const advSubmit = document.getElementById('advSubmit');
+const advLoader = document.getElementById('advLoader');
+const advResult = document.getElementById('advResult');
+const advChips = document.querySelectorAll('#advStyleChips .chip');
+const chosenStyles = new Set();
+advChips.forEach(c => c.addEventListener('click', () => {
+  const s = c.dataset.style;
+  if (chosenStyles.has(s)){ chosenStyles.delete(s); c.classList.remove('is-active'); }
+  else { chosenStyles.add(s); c.classList.add('is-active'); }
+}));
+
+const CATALOGUE = `Sunrise Natural Stones catalogue:
+
+MARBLE
+- Carrara White (Italian) — soft grey veining on warm white. Classic. Polishes to high reflection.
+- Statuario (Italian) — bright white with dramatic dark veining. Statement piece.
+- Calacatta Gold (Italian) — white with bold gold/grey veining. Premium luxury.
+- Makrana White (Indian) — pure, durable. The marble of the Taj Mahal. Excellent for flooring.
+- Rajnagar Green (Indian) — deep green with white crystalline veining. Striking.
+- Onyx (Indian) — amber, translucent. Light-passing, best for backlit walls and accents.
+- Albeta White (Indian) — soft ivory ground, gentle warm veining.
+- Banswara White (Indian) — smooth ivory with grey-gold movement.
+
+SANDSTONE (Rajasthan-quarried, weather-resistant, ideal for exteriors)
+- White Sandstone — from Bhopal mines. Pale, even-grained. Minimal façades.
+- Beige Sandstone — from Dholpur. Warm, classic for pavements.
+- Red Sandstone — raw finish. Iron-rich, heritage classic.
+- Pink Sandstone — from Dholpur, honed finish. Soft Rajasthani pink, distinctive.
+- Woodland Sandstone — from Bijolia mines. Rich layered wood-grain tones, warm and organic.
+- Pencil Line Grey Sandstone — from Bijolia mines. Subtle horizontal veining on pale grey, refined and contemporary.
+
+GRANITE (igneous, hard, heat-resistant, low-maintenance — best for countertops, high-traffic flooring)
+- Black Granite — from Devgarh, Rajasthan. Deep, dense obsidian black with subtle grey-gold crystalline speckles.
+- P White Granite — from Sirohi, Rajasthan. Classic bright white base punctuated by clean black and charcoal speckles.
+- Alaska Azul — from Beawar/Bhilwara, Rajasthan. Dynamic cream-white quartz run through with blue-grey veins and dark mineral pockets.
+- Alaska White — from Beawar/Bhilwara, Rajasthan. Brilliant frosty white ice crystals interspersed with warm brown and obsidian accents.
+- Alaska Gold — from Beawar/Bhilwara, Rajasthan. Luxurious warm golden and amber tones blended with crystalline ivory and dramatic dark veining.
+- Blue Dunes — from Beawar/Bhilwara, Rajasthan. Earthy olive and sand dunes swept with waves of cool blue and deep charcoal.
+
+QUARTZ (natural crystalline)
+- Crystallo (Pink) — translucent, glassy pink ground with soft crystalline veining. Backlit applications.
+- Patagonia — geological drama with cream, gold, and dark quartz minerals.
+
+ENGINEERED QUARTZ (calibrated, consistent, best for spec-controlled jobs)
+- Calacatta Series — white with bold grey veining. Classic premium look.
+- Sparkle Series — modern grey canvas embedded with shimmering, reflective mica glints.
+- Calacatta Gold Series — frosty white surface detailed with striking gold and amber veining.
+- Antique Gold Series — bookmatched mirrored pattern with elegant golden-grey veins.
+- Venetian Gold Series — warm cream base traced by delicate, soft golden-beige mineral movements.
+- Dazzle Grey Series — cool grey base highlighted by white marble veining.
+- LIRI Grey — warm white background detailed with thin grey diagonal hairline movement.
+- Carrara Hilos — Carrara white surface with soft grey clouding and fine spiderweb veining.
+- Black Sparkle — deep black canvas loaded with glittering silver-white mineral flakes.
+- White Sparkle — pure white field embedded with hundreds of fine, shimmering quartz crystal flakes.
+- Mapple White — soft off-white surface with extremely subtle textured patterning.
+- Pure White — absolute, solid bright white quartz for clean minimalist aesthetic.
+
+FINISHES — Polished (high gloss), Honed (matte), Shot blast (textured, slip-resistant for exteriors).`;
+
+advForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  advSubmit.setAttribute('disabled','');
+  advLoader.classList.add('is-shown');
+  advResult.classList.remove('is-shown');
+  const data = new FormData(advForm);
+  const styles = [...chosenStyles].join(', ') || 'no preference';
+  const prompt = `${CATALOGUE}
+
+You are an expert stone consultant at Sunrise Natural Stones, Udaipur. A customer is enquiring:
+
+Use case: ${data.get('use')}
+Setting: ${data.get('setting')}
+Style direction: ${styles}
+Additional notes: ${data.get('notes') || '—'}
+
+Recommend 2 or 3 stones FROM THE CATALOGUE above that would suit this project. For each recommendation, write 1-2 sentences explaining WHY (durability, look, climate suitability, finish). Include a brief recommended finish (polished/honed/shot blast).
+
+Format as HTML with this exact structure (no markdown, no code fences):
+<strong>Our recommendations:</strong>
+<p><em>1. [Stone Name]</em> — [reason in 1-2 sentences]. Suggested finish: [finish].</p>
+<p><em>2. [Stone Name]</em> — [reason in 1-2 sentences]. Suggested finish: [finish].</p>
+<p style="margin-top:14px; font-size:13px; color:var(--mute);">Want samples or a quote? Click "Start an enquiry" below.</p>`;
+
+  try {
+    const reply = await window.claude.complete(prompt);
+    advResult.innerHTML = reply;
+    advResult.classList.add('is-shown');
+  } catch(err){
+    advResult.innerHTML = '<strong>Sorry — the advisor could not respond right now.</strong> Please try again, or <a href="#contact">start a manual enquiry</a> and we will recommend a stone personally.';
+    advResult.classList.add('is-shown');
+  } finally {
+    advLoader.classList.remove('is-shown');
+    advSubmit.removeAttribute('disabled');
+  }
+});
+
+// ───── Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(en => { if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }});
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ───── Smooth anchor offset
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (ev) => {
+    const id = a.getAttribute('href');
+    if (id.length < 2) return;
+    const t = document.querySelector(id);
+    if (!t) return;
+    ev.preventDefault();
+    const y = t.getBoundingClientRect().top + window.scrollY - 56;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>

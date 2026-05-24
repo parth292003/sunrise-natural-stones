@@ -3011,13 +3011,17 @@ async function translatePage(lang){
     // Use ORIGINAL english as source to avoid translating already-translated text
     const items = els.map((el, i) => ({ i, text: (originalText.get(el) || el.innerHTML).replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim() })).filter(x => x.text);
 
-    // Chunk to avoid 1024-token output cap
     const chunkSize = 12;
     const out = new Array(els.length).fill(null);
     for (let c = 0; c < items.length; c += chunkSize){
       const chunk = items.slice(c, c + chunkSize);
       const prompt = `Translate these English UI strings for a natural-stone exporter's website into ${langNames[lang]}. Keep each translation concise, professional, trade-appropriate. Preserve any names like "Sunrise", "Udaipur", "Carrara", "Makrana", "Statuario", "Calacatta". Return ONLY a JSON array of strings, same order and length as the input. No markdown, no code fences, no commentary.\n\nInput (${chunk.length} strings):\n${JSON.stringify(chunk.map(x => x.text))}`;
-      const reply = await window.claude.complete(prompt);
+      let reply;
+      if (window.claude && typeof window.claude.complete === 'function') {
+        reply = await window.claude.complete(prompt);
+      } else {
+        throw new Error('Claude service unavailable');
+      }
       let arr = null;
       try {
         const start = reply.indexOf('[');
@@ -3035,7 +3039,6 @@ async function translatePage(lang){
     els.forEach((el, i) => {
       const orig = originalText.get(el);
       if (typeof out[i] === 'string' && out[i].length){
-        // Preserve <strong>/<em>/<br/> from original if simple
         el.textContent = out[i];
       } else if (orig !== undefined){
         el.innerHTML = orig;
@@ -3073,55 +3076,294 @@ advChips.forEach(c => c.addEventListener('click', () => {
   else { chosenStyles.add(s); c.classList.add('is-active'); }
 }));
 
-const CATALOGUE = `Sunrise Natural Stones catalogue:
+const CatalogData = [
+  {
+    name: 'Carrara White (Italian Marble)',
+    category: 'marble',
+    useCases: ['Flooring — interior', 'Wall cladding — interior', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Modern minimal', 'Classical warm', 'High polish'],
+    suggestedFinish: 'Polished',
+    why: 'Its legendary fine grey veining and glowing white base provide an unmatched classical warmth, while polishing highlights its premium crystal structure.'
+  },
+  {
+    name: 'Statuario (Italian Marble)',
+    category: 'marble',
+    useCases: ['Wall cladding — interior', 'Hospitality lobby / reception', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Modern minimal', 'High polish', 'Cool / contemporary'],
+    suggestedFinish: 'Polished',
+    why: 'The bold, theatrical veining makes it a stunning focal point for walls and luxury lobbies, instantly creating a high-end statement.'
+  },
+  {
+    name: 'Calacatta Gold (Italian Marble)',
+    category: 'marble',
+    useCases: ['Wall cladding — interior', 'Hospitality lobby / reception', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Classical warm', 'High polish', 'Heritage / traditional'],
+    suggestedFinish: 'Polished',
+    why: 'The rare blend of gold and grey veining brings a luxurious, classical warmth that elevates premium bathroom vanities and feature walls.'
+  },
+  {
+    name: 'Makrana White (Indian Marble)',
+    category: 'marble',
+    useCases: ['Flooring — interior', 'Staircase / steps', 'Monument / memorial'],
+    settings: ['Indoor', 'Both'],
+    styles: ['Modern minimal', 'Classical warm', 'Heritage / traditional'],
+    suggestedFinish: 'Polished',
+    why: 'As the iconic marble of the Taj Mahal, its ultra-dense calcitic structure ensures decades of wear-resistance, making it perfect for high-traffic indoor flooring.'
+  },
+  {
+    name: 'Rajnagar Green (Indian Marble)',
+    category: 'marble',
+    useCases: ['Flooring — interior', 'Wall cladding — interior', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Classical warm', 'Heritage / traditional', 'Earthy / muted'],
+    suggestedFinish: 'Polished',
+    why: 'Its deep forest-green base and active white veining create a striking organic ambiance, ideal for dramatic floors and botanical style schemes.'
+  },
+  {
+    name: 'Indian Onyx Marble',
+    category: 'marble',
+    useCases: ['Wall cladding — interior', 'Hospitality lobby / reception'],
+    settings: ['Indoor'],
+    styles: ['Classical warm', 'High polish', 'Cool / contemporary'],
+    suggestedFinish: 'Polished (Backlit)',
+    why: 'Its rare translucency allows light to pass through, creating an astonishing glowing amber showcase on reception backdrops or statement columns.'
+  },
+  {
+    name: 'Albeta White (Indian Marble)',
+    category: 'marble',
+    useCases: ['Flooring — interior', 'Staircase / steps', 'Wall cladding — interior'],
+    settings: ['Indoor'],
+    styles: ['Classical warm', 'Heritage / traditional'],
+    suggestedFinish: 'Polished',
+    why: 'The warm ivory background and gentle, sophisticated veining bring a quiet, timeless elegance that is highly prized in traditional Indian flooring.'
+  },
+  {
+    name: 'Banswara White (Indian Marble)',
+    category: 'marble',
+    useCases: ['Flooring — interior', 'Bathroom vanity / wall', 'Wall cladding — interior'],
+    settings: ['Indoor'],
+    styles: ['Classical warm', 'Modern minimal'],
+    suggestedFinish: 'Polished',
+    why: 'Offers a beautiful, cost-effective alternative to European white marbles with smooth ivory tones and a balanced grey-gold flow.'
+  },
+  {
+    name: 'White Sandstone (Bhopal)',
+    category: 'sandstone',
+    useCases: ['Wall cladding — exterior / façade', 'Wall cladding — interior'],
+    settings: ['Outdoor', 'Both'],
+    styles: ['Modern minimal', 'Cool / contemporary'],
+    suggestedFinish: 'Honed',
+    why: 'Its uniform, light-toned texture gives a super clean, minimal aesthetic that reflects heat beautifully, making it standard for modern building façades.'
+  },
+  {
+    name: 'Beige Sandstone (Dholpur)',
+    category: 'sandstone',
+    useCases: ['Flooring — exterior / pavement', 'Wall cladding — exterior / façade'],
+    settings: ['Outdoor', 'Both'],
+    styles: ['Classical warm', 'Earthy / muted', 'Heritage / traditional'],
+    suggestedFinish: 'Shot blast',
+    why: 'Highly weather-resistant and slip-proof when shot-blasted, its warm earthy tone is the absolute gold standard for pool decks and exterior pathways.'
+  },
+  {
+    name: 'Red Sandstone',
+    category: 'sandstone',
+    useCases: ['Wall cladding — exterior / façade', 'Monument / memorial'],
+    settings: ['Outdoor', 'Both'],
+    styles: ['Heritage / traditional', 'Earthy / muted'],
+    suggestedFinish: 'Raw / Natural split',
+    why: 'A dense, iron-rich stone famous for traditional Indian fortresses. Its deep terracotta red offers unmatched durability against heavy rain and UV exposure.'
+  },
+  {
+    name: 'Pink Sandstone (Dholpur)',
+    category: 'sandstone',
+    useCases: ['Wall cladding — exterior / façade', 'Wall cladding — interior', 'Monument / memorial'],
+    settings: ['Outdoor', 'Both'],
+    styles: ['Heritage / traditional', 'Classical warm'],
+    suggestedFinish: 'Honed',
+    why: 'Its unique, pleasant pastel pink shade provides a highly distinctive character, evoking traditional Rajasthani royal charm for outer walls.'
+  },
+  {
+    name: 'Woodland Sandstone (Bijolia)',
+    category: 'sandstone',
+    useCases: ['Flooring — exterior / pavement', 'Wall cladding — exterior / façade', 'Staircase / steps'],
+    settings: ['Outdoor', 'Both'],
+    styles: ['Earthy / muted', 'Classical warm'],
+    suggestedFinish: 'Honed or Natural',
+    why: 'The fascinating, natural layered pattern resembles petrified wood, giving your exterior floor or feature wall an incredibly rich organic feel.'
+  },
+  {
+    name: 'Pencil Line Grey Sandstone (Bijolia)',
+    category: 'sandstone',
+    useCases: ['Flooring — exterior / pavement', 'Wall cladding — exterior / façade', 'Wall cladding — interior'],
+    settings: ['Outdoor', 'Indoor', 'Both'],
+    styles: ['Modern minimal', 'Cool / contemporary', 'Earthy / muted'],
+    suggestedFinish: 'Honed',
+    why: 'Featuring sleek, natural horizontal lines over a calm grey canvas, this is an excellent architect-grade pick for contemporary landscaping and pool coping.'
+  },
+  {
+    name: 'Black Granite (Devgarh)',
+    category: 'granite',
+    useCases: ['Kitchen countertop', 'Flooring — interior', 'Flooring — exterior / pavement', 'Staircase / steps', 'Monument / memorial'],
+    settings: ['Indoor', 'Outdoor', 'Both'],
+    styles: ['Modern minimal', 'Cool / contemporary', 'High polish'],
+    suggestedFinish: 'Polished (Indoor) / Shot blast (Outdoor)',
+    why: 'Extremely dense, scratch-proof, and heat-resistant, this obsidian granite is a premium and maintenance-free choice for countertops and stairs.'
+  },
+  {
+    name: 'P White Granite (Sirohi)',
+    category: 'granite',
+    useCases: ['Kitchen countertop', 'Flooring — interior', 'Flooring — exterior / pavement', 'Staircase / steps'],
+    settings: ['Indoor', 'Outdoor', 'Both'],
+    styles: ['Modern minimal', 'Cool / contemporary'],
+    suggestedFinish: 'Polished',
+    why: 'Highly cost-effective and rugged, its bright peppered pattern hides dust and stains perfectly, making it ideal for high-traffic commercial flooring.'
+  },
+  {
+    name: 'Alaska Azul Granite',
+    category: 'granite',
+    useCases: ['Kitchen countertop', 'Wall cladding — interior', 'Hospitality lobby / reception', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Cool / contemporary', 'High polish'],
+    suggestedFinish: 'Polished',
+    why: 'The cool blue-grey veining and glassy quartz pockets deliver a spectacular flowing motion that looks phenomenal on reception desks and designer kitchens.'
+  },
+  {
+    name: 'Alaska White Granite',
+    category: 'granite',
+    useCases: ['Kitchen countertop', 'Wall cladding — interior', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Cool / contemporary', 'High polish', 'Modern minimal'],
+    suggestedFinish: 'Polished',
+    why: 'Features large crystalline quartz clusters that catch the light like frosted ice, creating a bright, active canvas for kitchen countertops.'
+  },
+  {
+    name: 'Alaska Gold Granite',
+    category: 'granite',
+    useCases: ['Kitchen countertop', 'Wall cladding — interior', 'Hospitality lobby / reception'],
+    settings: ['Indoor', 'Both'],
+    styles: ['Classical warm', 'High polish', 'Heritage / traditional'],
+    suggestedFinish: 'Polished',
+    why: 'The rich golden amber background and contrasting dark veins bring an intense premium energy and warmth to high-end bar tops and lobby features.'
+  },
+  {
+    name: 'Blue Dunes Granite',
+    category: 'granite',
+    useCases: ['Kitchen countertop', 'Wall cladding — interior', 'Hospitality lobby / reception'],
+    settings: ['Indoor', 'Both'],
+    styles: ['Earthy / muted', 'Cool / contemporary'],
+    suggestedFinish: 'Polished or Honed',
+    why: 'A masterpiece of natural motion, mimicking desert sand dunes swept by rivers of blue-grey. It coordinates perfectly with earthy timber palettes.'
+  },
+  {
+    name: 'Crystallo (Pink) Quartz',
+    category: 'quartz',
+    useCases: ['Wall cladding — interior', 'Hospitality lobby / reception', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['High polish', 'Cool / contemporary', 'Classical warm'],
+    suggestedFinish: 'Polished (Backlit)',
+    why: 'A rare natural crystal that glows beautifully under backlighting, turning any partition or hotel desk into a magical pink work of art.'
+  },
+  {
+    name: 'Patagonia Quartz',
+    category: 'quartz',
+    useCases: ['Wall cladding — interior', 'Hospitality lobby / reception', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Cool / contemporary', 'High polish'],
+    suggestedFinish: 'Polished',
+    why: 'One of the most visually dramatic stones in the world, combining ivory feldspar, golden minerals, and translucent quartz blocks for ultimate luxury.'
+  },
+  {
+    name: 'Calacatta Series (Engineered Quartz)',
+    category: 'engineered',
+    useCases: ['Kitchen countertop', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Modern minimal', 'Cool / contemporary', 'High polish'],
+    suggestedFinish: 'Polished',
+    why: 'Gives the ultra-luxury look of natural Calacatta marble but with absolute zero porosity, rendering it completely stain-proof against red wine and lemon juice.'
+  },
+  {
+    name: 'Calacatta Gold Series (Engineered Quartz)',
+    category: 'engineered',
+    useCases: ['Kitchen countertop', 'Bathroom vanity / wall'],
+    settings: ['Indoor'],
+    styles: ['Classical warm', 'High polish', 'Modern minimal'],
+    suggestedFinish: 'Polished',
+    why: 'Engineered for absolute color consistency across panels, combining modern clean white with luxury golden accents.'
+  },
+  {
+    name: 'Antique Gold Series (Engineered Quartz)',
+    category: 'engineered',
+    useCases: ['Kitchen countertop', 'Bathroom vanity / wall', 'Wall cladding — interior'],
+    settings: ['Indoor'],
+    styles: ['Classical warm', 'High polish'],
+    suggestedFinish: 'Polished (Bookmatched)',
+    why: 'Provides a bookmatched mirrored pattern with elegant golden-grey veins, offering grand luxury wall visual continuity.'
+  },
+  {
+    name: 'Pure White (Engineered Quartz)',
+    category: 'engineered',
+    useCases: ['Kitchen countertop', 'Bathroom vanity / wall', 'Flooring — interior'],
+    settings: ['Indoor'],
+    styles: ['Modern minimal', 'Cool / contemporary'],
+    suggestedFinish: 'Polished or Honed',
+    why: 'For the ultimate minimalist look, this offers a completely uniform, solid paper-white surface with zero grain or patterning.'
+  }
+];
 
-MARBLE
-- Carrara White (Italian) — soft grey veining on warm white. Classic. Polishes to high reflection.
-- Statuario (Italian) — bright white with dramatic dark veining. Statement piece.
-- Calacatta Gold (Italian) — white with bold gold/grey veining. Premium luxury.
-- Makrana White (Indian) — pure, durable. The marble of the Taj Mahal. Excellent for flooring.
-- Rajnagar Green (Indian) — deep green with white crystalline veining. Striking.
-- Onyx (Indian) — amber, translucent. Light-passing, best for backlit walls and accents.
-- Albeta White (Indian) — soft ivory ground, gentle warm veining.
-- Banswara White (Indian) — smooth ivory with grey-gold movement.
+function getRecommendations(use, setting, stylesArr, notes) {
+  const scored = CatalogData.map(stone => {
+    let score = 0;
+    if (setting === 'Outdoor' && !['Outdoor', 'Both'].includes(stone.settings[0] || stone.settings[1])) {
+      score -= 500;
+    }
+    if (stone.settings.includes(setting) || stone.settings.includes('Both')) {
+      score += 3;
+    }
+    if (stone.useCases.includes(use)) {
+      score += 8;
+    }
+    stylesArr.forEach(style => {
+      if (stone.styles.includes(style)) {
+        score += 4;
+      }
+    });
+    if (use.includes('countertop') && (stone.category === 'granite' || stone.category === 'engineered')) {
+      score += 5;
+    }
+    if (use.includes('façade') && stone.category === 'sandstone') {
+      score += 5;
+    }
+    if (use.includes('exterior') && (stone.category === 'sandstone' || stone.category === 'granite')) {
+      score += 5;
+    }
+    const lowerNotes = notes.toLowerCase();
+    if (lowerNotes.includes('white') && stone.name.toLowerCase().includes('white')) score += 3;
+    if (lowerNotes.includes('black') && stone.name.toLowerCase().includes('black')) score += 3;
+    if (lowerNotes.includes('gold') && stone.name.toLowerCase().includes('gold')) score += 3;
+    if (lowerNotes.includes('green') && stone.name.toLowerCase().includes('green')) score += 3;
+    if (lowerNotes.includes('pink') && stone.name.toLowerCase().includes('pink')) score += 3;
+    if (lowerNotes.includes('grey') && stone.name.toLowerCase().includes('grey')) score += 3;
+    if (lowerNotes.includes('beige') && stone.name.toLowerCase().includes('beige')) score += 3;
+    if (lowerNotes.includes('durable') || lowerNotes.includes('traffic') || lowerNotes.includes('heavy')) {
+      if (stone.category === 'granite' || stone.category === 'sandstone') score += 2;
+    }
+    return { stone, score };
+  });
 
-SANDSTONE (Rajasthan-quarried, weather-resistant, ideal for exteriors)
-- White Sandstone — from Bhopal mines. Pale, even-grained. Minimal façades.
-- Beige Sandstone — from Dholpur. Warm, classic for pavements.
-- Red Sandstone — raw finish. Iron-rich, heritage classic.
-- Pink Sandstone — from Dholpur, honed finish. Soft Rajasthani pink, distinctive.
-- Woodland Sandstone — from Bijolia mines. Rich layered wood-grain tones, warm and organic.
-- Pencil Line Grey Sandstone — from Bijolia mines. Subtle horizontal veining on pale grey, refined and contemporary.
+  const valid = scored.filter(item => item.score > -100);
+  valid.sort((a, b) => b.score - a.score);
+  const count = valid.length >= 3 ? 3 : (valid.length >= 2 ? 2 : valid.length);
+  const selected = valid.slice(0, count).map(x => x.stone);
+  if (selected.length === 0) {
+    return [CatalogData[0], CatalogData[10], CatalogData[14]];
+  }
+  return selected;
+}
 
-GRANITE (igneous, hard, heat-resistant, low-maintenance — best for countertops, high-traffic flooring)
-- Black Granite — from Devgarh, Rajasthan. Deep, dense obsidian black with subtle grey-gold crystalline speckles.
-- P White Granite — from Sirohi, Rajasthan. Classic bright white base punctuated by clean black and charcoal speckles.
-- Alaska Azul — from Beawar/Bhilwara, Rajasthan. Dynamic cream-white quartz run through with blue-grey veins and dark mineral pockets.
-- Alaska White — from Beawar/Bhilwara, Rajasthan. Brilliant frosty white ice crystals interspersed with warm brown and obsidian accents.
-- Alaska Gold — from Beawar/Bhilwara, Rajasthan. Luxurious warm golden and amber tones blended with crystalline ivory and dramatic dark veining.
-- Blue Dunes — from Beawar/Bhilwara, Rajasthan. Earthy olive and sand dunes swept with waves of cool blue and deep charcoal.
-
-QUARTZ (natural crystalline)
-- Crystallo (Pink) — translucent, glassy pink ground with soft crystalline veining. Backlit applications.
-- Patagonia — geological drama with cream, gold, and dark quartz minerals.
-
-ENGINEERED QUARTZ (calibrated, consistent, best for spec-controlled jobs)
-- Calacatta Series — white with bold grey veining. Classic premium look.
-- Sparkle Series — modern grey canvas embedded with shimmering, reflective mica glints.
-- Calacatta Gold Series — frosty white surface detailed with striking gold and amber veining.
-- Antique Gold Series — bookmatched mirrored pattern with elegant golden-grey veins.
-- Venetian Gold Series — warm cream base traced by delicate, soft golden-beige mineral movements.
-- Dazzle Grey Series — cool grey base highlighted by white marble veining.
-- LIRI Grey — warm white background detailed with thin grey diagonal hairline movement.
-- Carrara Hilos — Carrara white surface with soft grey clouding and fine spiderweb veining.
-- Black Sparkle — deep black canvas loaded with glittering silver-white mineral flakes.
-- White Sparkle — pure white field embedded with hundreds of fine, shimmering quartz crystal flakes.
-- Mapple White — soft off-white surface with extremely subtle textured patterning.
-- Pure White — absolute, solid bright white quartz for clean minimalist aesthetic.
-
-FINISHES — Polished (high gloss), Honed (matte), Shot blast (textured, slip-resistant for exteriors).`;
-
-advForm.addEventListener('submit', async (e) => {
+advForm.addEventListener('submit', (e) => {
   e.preventDefault();
   advSubmit.setAttribute('disabled','');
   advLoader.classList.add('is-shown');

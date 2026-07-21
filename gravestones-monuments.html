@@ -56,7 +56,7 @@
 <body>
 <section class="hero subpage-hero" id="top" style="min-height: auto; padding: 130px var(--pad) 60px; background: var(--cream); border-bottom: 1px solid var(--line);">
   <div class="hero__meta" style="animation: none; opacity: 1;">
-    <span class="hero__meta-loc"><span class="sun-glyph" aria-hidden="true"></span><span class="mono">Udaipur · Rajasthan · India</span></span>
+    <span class="hero__meta-loc"><span class="sun-glyph" aria-hidden="true"></span><span class="mono">Udaipur - Rajasthan - India</span></span>
     <span class="mono hero__meta-right">B2B Exporters & Manufacturers</span>
   </div>
   <div style="max-width: var(--max); margin: 0 auto; padding-top: 40px;">
@@ -85,11 +85,11 @@
     <div class="swatch-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
       <article class="swatch" style="border: 1px solid var(--line); border-radius: 8px; background: var(--paper); overflow: hidden; display: flex; flex-direction: column;">
         <span class="swatch__chip" style="width: 100%; height: 200px; overflow: hidden; display: block; background: var(--cream);">
-          <img loading="lazy" src="assets/images/granite/granite-black.jpg" alt="Bespoke Granite Tombstones" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <img loading="lazy" src="assets/images/bespoke/tombstone-bespoke.jpg" alt="Bespoke Granite Tombstones" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
         </span>
         <div class="swatch__meta" style="padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
           <div>
-            <span class="mono" style="font-size: 10px;">Gravestones & Monuments · 01</span>
+            <span class="mono" style="font-size: 10px;">Gravestones & Monuments - 01</span>
             <h3 style="font-family: var(--serif); font-weight: 400; font-size: 22px; margin-top: 4px;">Bespoke Granite Tombstones</h3>
             <p style="font-size: 13.5px; color: var(--mute); line-height: 1.5; margin-top: 8px;">Custom shaped headstones with highly detailed carvings, polished to a dark mirror shine.</p>
           </div>
@@ -98,11 +98,11 @@
       </article>
       <article class="swatch" style="border: 1px solid var(--line); border-radius: 8px; background: var(--paper); overflow: hidden; display: flex; flex-direction: column;">
         <span class="swatch__chip" style="width: 100%; height: 200px; overflow: hidden; display: block; background: var(--cream);">
-          <img loading="lazy" src="assets/images/capabilities/cap-thick.png" alt="Marble Memorial Monuments" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <img loading="lazy" src="assets/images/bespoke/tombstone-marble-bespoke.jpg" alt="Marble Memorial Monuments" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
         </span>
         <div class="swatch__meta" style="padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
           <div>
-            <span class="mono" style="font-size: 10px;">Gravestones & Monuments · 02</span>
+            <span class="mono" style="font-size: 10px;">Gravestones & Monuments - 02</span>
             <h3 style="font-family: var(--serif); font-weight: 400; font-size: 22px; margin-top: 4px;">Marble Memorial Monuments</h3>
             <p style="font-size: 13.5px; color: var(--mute); line-height: 1.5; margin-top: 8px;">Elegantly sculpted and weathered headstones crafted in hard Indian white marble.</p>
           </div>
@@ -111,11 +111,11 @@
       </article>
       <article class="swatch" style="border: 1px solid var(--line); border-radius: 8px; background: var(--paper); overflow: hidden; display: flex; flex-direction: column;">
         <span class="swatch__chip" style="width: 100%; height: 200px; overflow: hidden; display: block; background: var(--cream);">
-          <img loading="lazy" src="assets/images/capabilities/cap-block.png" alt="Granite Kerb Sets & Bases" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <img loading="lazy" src="assets/images/bespoke/tombstone-kerb-bespoke.jpg" alt="Granite Kerb Sets & Bases" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
         </span>
         <div class="swatch__meta" style="padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
           <div>
-            <span class="mono" style="font-size: 10px;">Gravestones & Monuments · 03</span>
+            <span class="mono" style="font-size: 10px;">Gravestones & Monuments - 03</span>
             <h3 style="font-family: var(--serif); font-weight: 400; font-size: 22px; margin-top: 4px;">Granite Kerb Sets & Bases</h3>
             <p style="font-size: 13.5px; color: var(--mute); line-height: 1.5; margin-top: 8px;">Complete memorial enclosure systems and structural bases customized to local cemetery regulations.</p>
           </div>
@@ -144,16 +144,229 @@
       </div>
     </div>
   </div>
-</section><!-- ───── ENQUIRY MODAL ───── -->
+</section><!-- ───── AI STONE ADVISOR ───── -->
+<section class="advisor" id="advisor" data-screen-label="08 Stone Advisor">
+  <div class="advisor__inner">
+    <div class="advisor__head">
+      <span class="advisor__badge"><span class="sun-glyph" aria-hidden="true"></span><span class="mono">AI · Stone Advisor</span></span>
+      <h2 class="i18n" data-key="advisor-title">Not sure which stone? <em>Ask.</em></h2>
+      <p class="i18n" data-key="advisor-sub">Tell us about your project and our advisor will suggest a stone from the catalogue with its trade-offs. Indoor or outdoor, modern or classical &mdash; we will recommend what we would specify ourselves.</p>
+    </div>
+
+    <form class="advisor__panel" id="advisorForm">
+      <div class="advisor__row">
+        <div class="field">
+          <label for="adv-use">Use case</label>
+          <select id="adv-use" name="use" required>
+            <option value="" disabled selected>Where will the stone go?</option>
+            <option>Flooring — interior</option>
+            <option>Flooring — exterior / pavement</option>
+            <option>Wall cladding — interior</option>
+            <option>Wall cladding — exterior / façade</option>
+            <option>Kitchen countertop</option>
+            <option>Bathroom vanity / wall</option>
+            <option>Staircase / steps</option>
+            <option>Monument / memorial</option>
+            <option>Hospitality lobby / reception</option>
+            <option>Other / not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="adv-setting">Setting</label>
+          <select id="adv-setting" name="setting" required>
+            <option value="" disabled selected>Indoor or outdoor?</option>
+            <option>Indoor</option>
+            <option>Outdoor</option>
+            <option>Both</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Style direction</label>
+        <div class="chips" id="advStyleChips">
+          <button type="button" class="chip" data-style="Modern minimal">Modern minimal</button>
+          <button type="button" class="chip" data-style="Classical warm">Classical warm</button>
+          <button type="button" class="chip" data-style="Earthy / muted">Earthy / muted</button>
+          <button type="button" class="chip" data-style="Cool / contemporary">Cool / contemporary</button>
+          <button type="button" class="chip" data-style="High polish">High polish</button>
+          <button type="button" class="chip" data-style="Heritage / traditional">Heritage</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="adv-notes">Anything else? <span style="text-transform:none; letter-spacing:0; color:var(--mute);">(optional)</span></label>
+        <textarea id="adv-notes" name="notes" placeholder="Climate, traffic, budget guidance, colour preferences, project size…"></textarea>
+      </div>
+
+      <button type="submit" class="advisor__submit" id="advSubmit">
+        <span>Recommend a stone</span><span class="arr">→</span>
+      </button>
+      <div class="advisor__loader" id="advLoader">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span>Thinking through the catalogue…</span>
+      </div>
+      <div class="advisor__result" id="advResult"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ───── CONTACT ───── -->
+<section class="contact" id="contact" data-screen-label="09 Contact">
+  <div class="contact__inner">
+    <div class="section-head" style="margin-bottom: clamp(24px,4vw,40px);">
+      <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="contact-index">— 07 / Contact</span></span>
+      <h2 class="section-title i18n" data-key="contact-title">Tell us about<br/>your <em>project.</em></h2>
+      <p class="contact__lede i18n" data-key="contact-lede">Send a brief &mdash; product, dimensions, finish, a reference image &mdash; and we will come back with options, samples and a quote.</p>
+    </div>
+
+    <div class="contact__grid">
+      <div>
+        <button class="contact__cta" data-open-modal>
+          <span class="i18n" data-key="contact-cta">Start an enquiry</span>
+          <span class="arr">→</span>
+        </button>
+        <p class="mono" style="margin-top:18px;">Sent directly to our inbox.</p>
+      </div>
+
+      <div class="contact__info">
+        <div class="contact__block" style="padding-top:0;">
+          <span class="mono">Write to us</span>
+          <a class="contact__link" href="mailto:contact@sunrisenaturalstones.com">contact@sunrisenaturalstones.com</a>
+          <a class="contact__link contact__link--sub" href="mailto:deepak@sunrisenaturalstones.com">deepak@sunrisenaturalstones.com</a>
+          <a class="contact__link contact__link--sub" href="mailto:jeetu@sunrisenaturalstones.com">jeetu@sunrisenaturalstones.com</a>
+        </div>
+
+        <div class="contact__block">
+          <span class="mono">Call or WhatsApp</span>
+          <a class="contact__link" href="tel:+917014568709">+91 70145 68709</a>
+          <a class="contact__link contact__link--sub" href="tel:+919414159052">+91 94141 59052</a>
+        </div>
+
+        <div class="contact__block">
+          <span class="mono">Visit / follow</span>
+          <p class="contact__link" style="font-style:italic;">Udaipur, Rajasthan, India</p>
+          <a class="contact__link contact__link--sub" href="https://www.instagram.com/the_sunrise_store" target="_blank" rel="noopener">@the_sunrise_store on Instagram &nearr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── ENQUIRY MODAL ───── -->
 <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
   <div class="modal__card">
     <div class="modal__top">
       <div>
         <h3 class="modal__title" id="modalTitle">Start an enquiry</h3>
         <p class="modal__sub">Sends to contact@sunrisenaturalstones.com</p>
-      </div><!-- ───── Language overlay ───── -->
+      </div>
+      <button class="modal__close" id="modalClose" aria-label="Close enquiry">×</button>
+    </div>
+    <div class="modal__body">
+      <form class="form" id="enquiryForm">
+        <div class="form__row">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required placeholder="Your full name"/></div>
+          <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" required placeholder="+1 555 123 4567"/></div>
+        </div>
+        <div class="form__row">
+          <div class="field"><label for="f-country">Country</label><input id="f-country" name="country" type="text" required placeholder="Country"/></div>
+          <div class="field"><label for="f-city">City</label><input id="f-city" name="city" type="text" required placeholder="City"/></div>
+        </div>
+        <div class="field"><label for="f-email">Email <span style="text-transform:none; letter-spacing:0; color:var(--mute);">(optional)</span></label><input id="f-email" name="email" type="email" placeholder="you@example.com"/></div>
+        <div class="field">
+          <label for="f-product">Product</label>
+          <select id="f-product" name="product" required>
+            <option value="" disabled selected>Select a product</option>
+            <optgroup label="Marble">
+              <option>Nirzerna Marble</option><option>Aagaria Marble</option><option>Indian Onyx Marble</option>
+              <option>Green Marble</option><option>Panda White Marble</option>
+            </optgroup>
+            <optgroup label="Sandstone">
+              <option>White Sandstone</option><option>Beige Sandstone</option><option>Red Sandstone</option><option>Pink Sandstone</option><option>Woodland Sandstone</option><option>Pencil Line Grey Sandstone</option>
+            </optgroup>
+            <optgroup label="Granite">
+              <option>Black Granite</option><option>P White Granite</option>
+              <option>Alaska Azul Granite</option><option>Alaska White Granite</option><option>Alaska Gold Granite</option><option>Blue Dunes Granite</option>
+            </optgroup>
+            <optgroup label="Quartz">
+              <option>Crystallo (Pink) Quartz</option><option>Patagonia Quartz</option>
+            </optgroup>
+            <optgroup label="Engineered Quartz">
+              <option>Calacatta Series</option><option>Sparkle Series</option><option>Calacatta Gold Series</option><option>Antique Gold Series</option><option>Venetian Gold Series</option><option>Dazzle Grey Series</option><option>LIRI Grey</option><option>Carrara Hilos</option><option>Black Sparkle</option><option>White Sparkle</option><option>Mapple White</option><option>Pure White</option>
+            </optgroup>
+            <optgroup label="Bespoke">
+              <option>Marble Sinks</option><option>Tomb Stones &amp; Monuments</option>
+              <option>Countertops</option><option>Vanity Tops</option><option>Marble Bathtubs</option>
+            </optgroup>
+            <option>Other / Not sure</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-message">Your enquiry</label><textarea id="f-message" name="message" required placeholder="Quantity, dimensions, finish, project timeline, anything else we should know."></textarea></div>
+        <button type="submit" class="form__submit">Send enquiry <span class="arr">→</span></button>
+        <p class="form__hint">Or write directly to <a href="mailto:contact@sunrisenaturalstones.com">contact@sunrisenaturalstones.com</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ───── Language overlay ───── -->
 <div class="lang-overlay" id="langOverlay" aria-hidden="true">
-  <div class="spinner"><div></div><!-- ───── FOOTER ───── -->
+  <div class="spinner"><div></div><div></div><div></div></div>
+  <span class="label" id="langOverlayLabel">Translating…</span>
+</div>
+
+<!-- ───── REVIEWS ───── -->
+<section class="reviews" id="reviews" data-screen-label="06 Reviews">
+  <div class="reviews__head">
+    <div class="reviews__head-l">
+      <span class="mono section-index"><span class="sun-glyph" aria-hidden="true"></span><span class="i18n" data-key="reviews-index">— 05 / Customer satisfaction</span></span>
+      <h2 class="section-title i18n" data-key="reviews-title">From clients,<br/><em>in their words.</em></h2>
+    </div>
+    <div class="reviews__rating">
+      <span class="stars">★★★★<span style="opacity:.4;">★</span></span>
+      <span class="num">4.8</span>
+      <span class="sub i18n" data-key="reviews-meta">From repeat buyers worldwide</span>
+    </div>
+  </div>
+
+  <div class="reviews__grid">
+    <article class="review reveal">
+      <span class="review__stars">★★★★★</span>
+      <p class="review__quote">Three containers of Calacatta, matched vein-to-vein for a hotel lobby. Most suppliers would have shrugged at that brief.</p>
+      <div class="review__meta"><span class="review__name">Kelly A.</span><span class="review__loc">New York · USA</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★<span style="opacity:.4;">★</span></span>
+      <p class="review__quote">Beige sandstone for a villa façade in the Gulf climate. Two years on, still looks the day it was crated. Shipping took a week longer than promised.</p>
+      <div class="review__meta"><span class="review__name">Mohammed A.</span><span class="review__loc">Dubai · UAE</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★★</span>
+      <p class="review__quote">Honest people, honest stone. Makrana and Statuario for three projects so far &mdash; quality has only gone up.</p>
+      <div class="review__meta"><span class="review__name">Elena R.</span><span class="review__loc">Milan · Italy</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★<span style="opacity:.4;">★</span></span>
+      <p class="review__quote">A cut-to-size order for a commercial fit-out, delivered ahead of schedule. Packing was exceptional. Would have liked more finish samples up front.</p>
+      <div class="review__meta"><span class="review__name">James W.</span><span class="review__loc">London · UK</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★★</span>
+      <p class="review__quote">Onyx behind a reception desk in Lagos. Guests stop to photograph it. That speaks for itself.</p>
+      <div class="review__meta"><span class="review__name">Aisha O.</span><span class="review__loc">Lagos · Nigeria</span></div>
+    </article>
+    <article class="review reveal">
+      <span class="review__stars">★★★★<span style="opacity:.4;">★</span></span>
+      <p class="review__quote">Precise dimensions, beautiful finish. A first impression of Indian craftsmanship for a Japanese client &mdash; and a very good one.</p>
+      <div class="review__meta"><span class="review__name">Hiroshi T.</span><span class="review__loc">Tokyo · Japan</span></div>
+    </article>
+  </div>
+</section>
+
+
+
+<!-- ───── FOOTER ───── -->
 <footer class="foot">
   <div class="foot__grid">
     <div class="foot__brand">
@@ -202,7 +415,9 @@
     <span class="mono">© 2026 Sunrise Natural Stones</span>
     <span class="mono">Udaipur · Rajasthan · India</span>
   </div>
-</footer><script>
+</footer>
+
+<script>
 // ───── Nav scroll
 const navEl = document.getElementById('nav');
 const onScroll = () => navEl.classList.toggle('is-scrolled', window.scrollY > 30);
@@ -1115,7 +1330,7 @@ advForm.addEventListener('submit', (e) => {
       advResult.classList.add('is-shown');
     } catch(err) {
       console.error(err);
-      advResult.innerHTML = '<strong>Sorry — the advisor could not respond right now.</strong> Please try again, or <a href="#contact">start a manual enquiry</a> and we will recommend a stone personally.';
+      advResult.innerHTML = '<strong>Sorry — the advisor could not respond right now.</strong> Please try again, or <a href="index.html#contact">start a manual enquiry</a> and we will recommend a stone personally.';
       advResult.classList.add('is-shown');
     } finally {
       advLoader.classList.remove('is-shown');

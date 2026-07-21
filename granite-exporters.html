@@ -52,8 +52,68 @@
 {"@context": "https://schema.org","@type": "ItemPage","mainEntity": {"@type": "Product","name": "Indian Granite Slabs and Blocks","image": "https://www.sunrisenaturalstones.com/assets/images/granite/granite-black.jpg","description": "Premium exporters of Indian granite slabs and blocks from Rajasthan, including Black Granite, Alaska White, and Blue Dunes.","brand": {"@type": "Brand","name": "Sunrise Natural Stones"},"offers": {"@type": "AggregateOffer","priceCurrency": "USD","price": "Wholesale Price on Request","seller": {"@type": "WholesaleStore","name": "Sunrise Natural Stones"}}}}
 </script>
 <link rel="stylesheet" href="assets/css/style.css" />
-</head>
+</head></head>
 <body>
+
+<!-- ───── NAV ───── -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html#top" class="nav__brand" aria-label="Sunrise Natural Stones — home">
+      <span class="nav__logo"><img src="logo.png" alt="Sunrise Natural Stones logo"/></span>
+      <span class="nav__brand-text">
+        <span class="nav__brand-name">Sunrise Natural Stones</span>
+        <span class="nav__brand-sub">Marble · Granite · Quartz · Sandstone</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#range">Range</a>
+      <a href="index.html#capabilities">Capabilities</a>
+      <a href="index.html#bespoke">Bespoke</a>
+      <a href="index.html#advisor">Advisor</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="lang" id="langPicker">
+      <button class="lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+        <svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4.5" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+        <span id="langLabel">EN</span>
+        <span class="caret">▾</span>
+      </button>
+      <div class="lang__menu" id="langMenu">
+        <button data-lang="en" class="is-active"><span>English</span><span class="mono">EN</span></button>
+        <button data-lang="hi"><span>हिन्दी</span><span class="mono">HI</span></button>
+        <button data-lang="ar"><span>العربية</span><span class="mono">AR</span></button>
+        <button data-lang="zh"><span>中文 · Mandarin</span><span class="mono">ZH</span></button>
+        <button data-lang="ja"><span>日本語</span><span class="mono">JA</span></button>
+        <button data-lang="ko"><span>한국어</span><span class="mono">KO</span></button>
+        <button data-lang="de"><span>Deutsch</span><span class="mono">DE</span></button>
+        <button data-lang="fr"><span>Français</span><span class="mono">FR</span></button>
+        <button data-lang="it"><span>Italiano</span><span class="mono">IT</span></button>
+        <button data-lang="es"><span>Español</span><span class="mono">ES</span></button>
+        <button data-lang="pt"><span>Português</span><span class="mono">PT</span></button>
+        <button data-lang="ru"><span>Русский</span><span class="mono">RU</span></button>
+        <button data-lang="nl"><span>Nederlands</span><span class="mono">NL</span></button>
+        <button data-lang="pl"><span>Polski</span><span class="mono">PL</span></button>
+      </div>
+    </div>
+    <button class="nav__cta" data-open-modal>Request a sample <span class="arr">→</span></button>
+    <button class="nav__burger" id="burger" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<!-- ───── Mobile menu ───── -->
+<div class="menu" id="menu" aria-hidden="true">
+  <button class="menu__close" id="menuClose" aria-label="Close menu">×</button>
+  <nav class="menu__links" aria-label="Mobile">
+    <a href="index.html#about" data-close-menu><span>About</span><span class="mono">01</span></a>
+    <a href="index.html#range" data-close-menu><span>Range</span><span class="mono">02</span></a>
+    <a href="index.html#capabilities" data-close-menu><span>Capabilities</span><span class="mono">03</span></a>
+    <a href="index.html#bespoke" data-close-menu><span>Bespoke</span><span class="mono">04</span></a>
+    <a href="index.html#advisor" data-close-menu><span>Stone Advisor</span><span class="mono">05</span></a>
+    <a href="index.html#contact" data-close-menu><span>Contact</span><span class="mono">06</span></a>
+  </nav>
+  <button class="menu__cta" data-open-modal data-close-menu>Request a sample →</button>
+</div>
 <section class="hero subpage-hero" id="top" style="min-height: auto; padding: 130px var(--pad) 60px; background: var(--cream); border-bottom: 1px solid var(--line);">
   <div class="hero__meta" style="animation: none; opacity: 1;">
     <span class="hero__meta-loc"><span class="sun-glyph" aria-hidden="true"></span><span class="mono">Udaipur - Rajasthan - India</span></span>

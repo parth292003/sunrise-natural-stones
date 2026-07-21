@@ -1704,3 +1704,16 @@ section{ position:relative; }
 }
 .lang-overlay .spinner div:nth-child(2){ animation-delay: .2s; }
 .lang-overlay .spinner div:nth-child(3){ animation-delay: .4s; }
+
+/* ───────── B2B SUBPAGES RESPONSIVE UTILITIES ───────── */
+.subpage-grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 60px);
+}
+@media (max-width: 768px) {
+  .subpage-grid-two {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+}

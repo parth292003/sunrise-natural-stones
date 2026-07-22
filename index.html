@@ -737,31 +737,31 @@
       <li class="bespoke__item bespoke-trigger is-active" data-img="b-sink">
         <span class="bespoke__num mono">01</span>
         <h3 class="bespoke__title">Marble Sinks</h3>
-        <span class="bespoke__hint">View →</span>
+        <a href="/luxury-stone-sinks" class="bespoke__hint" style="text-decoration: none;">View Marble Sinks &rarr;</a>
         <p class="bespoke__desc">Vessel and under-mount, carved from single blocks.</p>
       </li>
       <li class="bespoke__item bespoke-trigger" data-img="b-tomb">
         <span class="bespoke__num mono">02</span>
         <h3 class="bespoke__title">Tomb Stones <span class="serif-italic">&amp;</span> Monuments</h3>
-        <span class="bespoke__hint">View →</span>
+        <a href="/gravestones-monuments" class="bespoke__hint" style="text-decoration: none;">View Tomb Stones &amp; Monuments &rarr;</a>
         <p class="bespoke__desc">Custom shapes, engravings, classical and contemporary.</p>
       </li>
       <li class="bespoke__item bespoke-trigger" data-img="b-counter">
         <span class="bespoke__num mono">03</span>
         <h3 class="bespoke__title">Countertops</h3>
-        <span class="bespoke__hint">View →</span>
+        <span class="bespoke__hint">View &rarr;</span>
         <p class="bespoke__desc">Kitchen and bar surfaces, edge-profiled to spec.</p>
       </li>
       <li class="bespoke__item bespoke-trigger" data-img="b-vanity">
         <span class="bespoke__num mono">04</span>
         <h3 class="bespoke__title">Vanity Tops</h3>
-        <span class="bespoke__hint">View →</span>
+        <a href="/stone-vanity-tops" class="bespoke__hint" style="text-decoration: none;">View Vanity Tops &rarr;</a>
         <p class="bespoke__desc">Bath and powder room, with integrated basins.</p>
       </li>
       <li class="bespoke__item bespoke-trigger" data-img="b-tub">
         <span class="bespoke__num mono">05</span>
         <h3 class="bespoke__title">Marble Bathtubs</h3>
-        <span class="bespoke__hint">View →</span>
+        <a href="/stone-bathtubs" class="bespoke__hint" style="text-decoration: none;">View Marble Bathtubs &rarr;</a>
         <p class="bespoke__desc">Sculpted forms, hand-finished, weight on request.</p>
       </li>
     </ul>
@@ -785,7 +785,7 @@
       <div class="bespoke__stage-overlay">
         <span class="name" id="bespokeLabel">Marble Sinks</span>
         <span class="mono" id="bespokeRef">Bespoke · 01</span>
-        <a href="luxury-stone-sinks" id="bespokeExploreLink" style="margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--saffron); border: 1px solid rgba(242,163,16,.4); padding: 6px 16px; border-radius: 99px; transition: all 0.3s var(--ease); font-weight: 500;">Explore Collection &rarr;</a>
+        <a href="/luxury-stone-sinks" id="bespokeExploreLink" style="margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--saffron); border: 1px solid rgba(242,163,16,.4); padding: 6px 16px; border-radius: 99px; transition: all 0.3s var(--ease); font-weight: 500;">Explore Collection &rarr;</a>
       </div>
     </div>
   </div>
@@ -1152,11 +1152,11 @@ capTriggers.forEach(t => {
 
 // ───── Bespoke interactive viewer
 const bespokeLabels = {
-  'b-sink':    { label: 'Marble & Stone Sinks', ref: 'Bespoke · 01', url: 'luxury-stone-sinks' },
-  'b-tomb':    { label: 'Tombstones & Gravestones', ref: 'Bespoke · 02', url: 'gravestones-monuments' },
+  'b-sink':    { label: 'Marble & Stone Sinks', ref: 'Bespoke · 01', url: '/luxury-stone-sinks' },
+  'b-tomb':    { label: 'Tombstones & Gravestones', ref: 'Bespoke · 02', url: '/gravestones-monuments' },
   'b-counter': { label: 'Countertops', ref: 'Bespoke · 03', url: '#' },
-  'b-vanity':  { label: 'Vanity Tops', ref: 'Bespoke · 04', url: '#' },
-  'b-tub':     { label: 'Luxury Stone Bathtubs', ref: 'Bespoke · 05', url: 'stone-bathtubs' }
+  'b-vanity':  { label: 'Vanity Tops', ref: 'Bespoke · 04', url: '/stone-vanity-tops' },
+  'b-tub':     { label: 'Luxury Stone Bathtubs', ref: 'Bespoke · 05', url: '/stone-bathtubs' }
 };
 const bTriggers = document.querySelectorAll('.bespoke-trigger');
 const bWraps = document.querySelectorAll('.bespoke__stage-img-wrap');
@@ -1179,7 +1179,10 @@ function setBespoke(key){
   }
 }
 bTriggers.forEach(t => {
-  t.addEventListener('click', () => setBespoke(t.dataset.img));
+  t.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' || e.target.closest('a')) return;
+    setBespoke(t.dataset.img);
+  });
   t.addEventListener('mouseenter', () => setBespoke(t.dataset.img));
 });
 

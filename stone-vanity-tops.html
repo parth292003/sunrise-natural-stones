@@ -747,6 +747,7 @@
         <li><a href="/luxury-stone-sinks">Luxury Marble Sinks</a></li>
         <li><a href="/stone-bathtubs">Stone Bathtubs</a></li>
         <li><a href="/stone-vanity-tops">Stone Vanity Tops</a></li>
+        <li><a href="/granite-countertops">Granite Countertops</a></li>
       </ul>
     </div>
     <div class="foot__col">
@@ -828,11 +829,11 @@ capTriggers.forEach(t => {
 
 // ───── Bespoke interactive viewer
 const bespokeLabels = {
-  'b-sink':    { label: 'Marble & Stone Sinks', ref: 'Bespoke · 01', url: 'luxury-stone-sinks' },
-  'b-tomb':    { label: 'Tombstones & Gravestones', ref: 'Bespoke · 02', url: 'gravestones-monuments' },
-  'b-counter': { label: 'Countertops', ref: 'Bespoke · 03', url: '#' },
-  'b-vanity':  { label: 'Vanity Tops', ref: 'Bespoke · 04', url: '#' },
-  'b-tub':     { label: 'Luxury Stone Bathtubs', ref: 'Bespoke · 05', url: 'stone-bathtubs' }
+  'b-sink':    { label: 'Marble & Stone Sinks', ref: 'Bespoke · 01', url: '/luxury-stone-sinks' },
+  'b-tomb':    { label: 'Tombstones & Gravestones', ref: 'Bespoke · 02', url: '/gravestones-monuments' },
+  'b-counter': { label: 'Granite Countertops', ref: 'Bespoke · 03', url: '/granite-countertops' },
+  'b-vanity':  { label: 'Vanity Tops', ref: 'Bespoke · 04', url: '/stone-vanity-tops' },
+  'b-tub':     { label: 'Luxury Stone Bathtubs', ref: 'Bespoke · 05', url: '/stone-bathtubs' }
 };
 const bTriggers = document.querySelectorAll('.bespoke-trigger');
 const bWraps = document.querySelectorAll('.bespoke__stage-img-wrap');
@@ -855,7 +856,10 @@ function setBespoke(key){
   }
 }
 bTriggers.forEach(t => {
-  t.addEventListener('click', () => setBespoke(t.dataset.img));
+  t.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' || e.target.closest('a')) return;
+    setBespoke(t.dataset.img);
+  });
   t.addEventListener('mouseenter', () => setBespoke(t.dataset.img));
 });
 

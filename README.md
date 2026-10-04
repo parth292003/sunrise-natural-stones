@@ -9,65 +9,39 @@ Premium Indian natural stone exporter website showcasing marble, sandstone, gran
 ## 🗂️ Project Structure
 
 ```
-├── index.html                          # Main single-page website
-├── logo.png                            # Brand logo / favicon
-├── README.md                           # This file
-└── assets/
-    ├── video/
-    │   └── sunrisevideo11.mp4          # Hero background video
-    └── images/
-        ├── hero/                       # Hero slideshow photos
-        │   ├── hero-photo-2.jpg
-        │   └── hero-photo-3.jpg
-        ├── marble/                     # Marble product images
-        │   ├── marble-nirzerna.jpg
-        │   ├── marble-aagaria.jpg
-        │   ├── marble-onyx.png
-        │   ├── marble-green.jpg
-        │   └── marble-pandawhite.webp
-        ├── sandstone/                  # Sandstone product images
-        │   ├── sandstone-white.jpeg
-        │   ├── sandstone-beige.jpg
-        │   ├── sandstone-red.jpeg
-        │   ├── sandstone-pink.jpg
-        │   ├── sandstone-woodland.png
-        │   └── sandstone-pencilline-grey.png
-        ├── granite/                    # Granite product images
-        │   ├── granite-black.jpg
-        │   ├── granite-pwhite.webp
-        │   ├── granite-alaska-azul.webp
-        │   ├── granite-alaska-white.jpg
-        │   ├── granite-alaska-gold.jpg
-        │   └── granite-blue-dunes.jpg
-        ├── quartz/                     # Natural quartz images
-        │   ├── quartz-crystallo-pink.jpg
-        │   └── quartz-patagonia.jpg
-        ├── engineered/                 # Engineered quartz images
-        │   ├── engineered-calacatta.jpg
-        │   ├── engineered-sparkle.jpg
-        │   ├── engineered-calacatta-gold.png
-        │   ├── engineered-antique-gold.png
-        │   ├── engineered-venetian-gold.png
-        │   ├── engineered-dazzle-grey.png
-        │   ├── engineered-liri-grey.png
-        │   ├── engineered-carrara-hilos.png
-        │   ├── engineered-black-sparkle.png
-        │   ├── engineered-white-sparkle.png
-        │   ├── engineered-mapple-white.png
-        │   └── engineered-pure-white.png
-        ├── capabilities/               # Processing capability photos
-        │   ├── cap-block.png
-        │   ├── cap-slab.png
-        │   ├── cap-thick.png
-        │   ├── cap-cut.png
-        │   ├── cap-polished.png
-        │   ├── cap-honed.png
-        │   └── cap-shot.png
-        └── certifications/             # Certification logos
-            ├── cert-makeinindia.png
-            ├── cert-commerce.png
-            └── cert-fieo.png
+├── index.html                  # Homepage
+├── *.html                      # Product, collection and export-market pages (clean URLs, e.g. /marble-slabs)
+├── blog/                       # Journal: index + guides
+├── assets/
+│   ├── css/style.css           # All styles
+│   ├── js/main.js              # Shared script: nav, enquiry form, advisor, translations
+│   ├── video/hero.mp4          # Hero video (720p, ~1.4 MB)
+│   └── images/                 # WebP images; og/ holds 1200x630 social share images
+├── tools/
+│   ├── build_pages.py          # Generates the product, market and journal pages
+│   └── content/                # Copy for those pages (products.py, markets.py, journal.py)
+├── sitemap.xml, robots.txt     # Search engine files
+└── llms.txt                    # Plain-text business summary for AI assistants
 ```
+
+## ✏️ Editing generated pages
+
+The marble/granite slab and block pages, the market pages (/usa, /uk, /europe, /australia,
+/new-zealand) and everything under /blog are generated. Edit the copy in `tools/content/`, then run:
+
+```
+python3 tools/build_pages.py
+```
+
+The script takes the nav, contact section, enquiry modal and footer from `stone-bathtubs.html`,
+so change those there and re-run it. Add any new page to `sitemap.xml` and `llms.txt`.
+
+## 📨 Enquiry form
+
+The enquiry form posts to [FormSubmit](https://formsubmit.co) and is delivered to
+contact@sunrisenaturalstones.com. The first submission sends an activation email to that address,
+which must be confirmed once. If the service is unreachable, the form falls back to opening the
+visitor's email app.
 
 ## 🚀 Deployment (GitHub Pages)
 
@@ -79,10 +53,10 @@ Premium Indian natural stone exporter website showcasing marble, sandstone, gran
 
 ## ⚡ Tech Stack
 
-- **Pure HTML, CSS, JavaScript** — no frameworks or build tools required
+- **Pure HTML, CSS, JavaScript**, no frameworks; a small Python script generates some pages
 - Fully static — works with any static hosting provider
 - Responsive design with mobile-first approach
-- Multi-language support (EN / HI / AR)
+- Client-side translation (EN, HI, AR, DE, FR, IT, ES and more)
 
 ---
 

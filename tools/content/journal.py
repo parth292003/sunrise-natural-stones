@@ -278,7 +278,9 @@ the owner accepts a patina. Denser marbles such as Indian green hold up better t
 
 
 # ───────────────────────── Journal index ─────────────────────────
-POSTS = [tub_guide, import_guide, terms_guide]
+from content.company import GUIDES
+
+POSTS = [tub_guide, import_guide, terms_guide] + GUIDES
 
 posts_html = "".join(
     f'<a class="pg-post" href="{p["path"]}"><h2>{p["h1"]}</h2><p>{esc(p["description"])}</p>'
